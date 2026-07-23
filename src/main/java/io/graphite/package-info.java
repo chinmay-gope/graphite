@@ -7,7 +7,11 @@
  * where algorithms are exposed through specialized APIs instead of direct
  * algorithm classes.</p>
  *
+<<<<<<< HEAD
  * <h2>Features</h2>
+=======
+ * <h3>Features</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Mutable and immutable graph implementations</li>
@@ -20,7 +24,11 @@
  *     <li>Benchmarking framework</li>
  * </ul>
  *
+<<<<<<< HEAD
  * <h2>Architecture</h2>
+=======
+ * <h3>Architecture</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <p>Graphite separates graph storage from algorithm execution.
  * Algorithms are grouped into service APIs such as traversal,

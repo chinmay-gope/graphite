@@ -70,9 +70,38 @@
                     <release>${maven.compiler.release}</release>
                 </configuration>
             </plugin>
+<<<<<<< HEAD
         </plugins>
     </build>
 
+=======
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.5.6</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.12.0</version>
+                <configuration>
+                    <!-- Disables doclint checks for bad HTML tag hierarchy -->
+                    <doclint>all,-html,-accessibility</doclint>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.13.4</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+>>>>>>> fec1ea5 (fix: java docs)
     <packaging>jar</packaging>
 
 </project>

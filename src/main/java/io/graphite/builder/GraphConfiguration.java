@@ -1,7 +1,10 @@
 package io.graphite.builder;
 
 
+<<<<<<< HEAD
 import io.graphite.generator.RandomGraphBuilder;
+=======
+>>>>>>> fec1ea5 (fix: java docs)
 import io.graphite.generator.RandomGraphGenerator;
 import io.graphite.graph.GraphFactory;
 
@@ -33,10 +36,25 @@ public final class GraphConfiguration {
     private boolean parallelEdges;
     private boolean selfLoops;
     private boolean immutable;
+<<<<<<< HEAD
+=======
+    private boolean hasFixedVertexCount;
+>>>>>>> fec1ea5 (fix: java docs)
 
     private int minWeight = 1;
     private int maxWeight = 10;
 
+<<<<<<< HEAD
+=======
+    public boolean hasFixedVertexCount() {
+        return hasFixedVertexCount;
+    }
+
+    public void setHasFixedVertexCount(boolean hasFixedVertexCount) {
+        this.hasFixedVertexCount = hasFixedVertexCount;
+    }
+
+>>>>>>> fec1ea5 (fix: java docs)
     public int getVertices() {
         return vertices;
     }

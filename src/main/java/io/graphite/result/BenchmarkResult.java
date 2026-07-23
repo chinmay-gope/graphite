@@ -9,9 +9,15 @@ import io.graphite.benchmark.BenchmarkRunner;
  * <p>A {@code BenchmarkResult} stores execution statistics collected during
  * repeated benchmark iterations.</p>
  *
+<<<<<<< HEAD
  * <h2>
  * Contents
  * </h2>
+=======
+ * <br>
+ * Contents
+ * </br>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Average execution time</li>

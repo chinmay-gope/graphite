@@ -13,17 +13,28 @@ import java.util.List;
  * visited during algorithms such as Breadth-First Search (BFS),
  * Depth-First Search (DFS), and Topological Sort.</p>
  *
+<<<<<<< HEAD
  * <h2>Contents</h2>
+=======
+ * <br>Contents</br>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Traversal order</li>
  * </ul>
  *
+<<<<<<< HEAD
  * <h2>Immutability</h2>
  *
  * <p>This result object is immutable and safely shareable between threads.</p>
  *
  * <h2>Usage</h2>
+=======
+ * @param source source
+ * @param traversalOrder traversal result
+ *
+ * <br>Usage</br>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <pre>{@code
  * TraversalResult result = graph.traversal().bfs(0);

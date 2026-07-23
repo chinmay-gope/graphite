@@ -10,7 +10,11 @@ import io.graphite.model.Edge;
  * allowing algorithms and applications to query characteristics such as
  * connectivity, edge weights, self-loops, and graph emptiness.</p>
  *
+<<<<<<< HEAD
  * <h2>Supported Checks</h2>
+=======
+ * <h3>Supported Checks</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Empty graph detection</li>

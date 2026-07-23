@@ -1,6 +1,9 @@
 package io.graphite.builder;
 
+<<<<<<< HEAD
 import io.graphite.generator.RandomGraphBuilder;
+=======
+>>>>>>> fec1ea5 (fix: java docs)
 import io.graphite.generator.example.GraphExampleGenerator;
 import io.graphite.generator.preset.GraphPresetGenerator;
 import io.graphite.graph.PatternGraphBuilder;

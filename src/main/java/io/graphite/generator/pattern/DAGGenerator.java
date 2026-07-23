@@ -16,7 +16,11 @@ import java.util.concurrent.ThreadLocalRandom;
  * directed cycles. DAGs are widely used to model dependency relationships,
  * scheduling problems, and compilation pipelines.</p>
  *
+<<<<<<< HEAD
  * <h2>Applications</h2>
+=======
+ * <h3>Applications</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Task scheduling</li>

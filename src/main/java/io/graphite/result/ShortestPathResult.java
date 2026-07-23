@@ -17,6 +17,7 @@ import java.util.Objects;
  * from a source vertex and, when available, predecessor information for
  * path reconstruction.</p>
  *
+<<<<<<< HEAD
  * <h2>Contents</h2>
  *
  * <ul>
@@ -25,6 +26,12 @@ import java.util.Objects;
  * </ul>
  *
  * <h2>Immutability</h2>
+=======
+ *
+ * @param source source vertex
+ * @param distance distance array
+ * @param parent predecessor array
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <p>All internal arrays are defensively copied to preserve immutability.</p>
  *

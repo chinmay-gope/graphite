@@ -17,26 +17,42 @@ import java.util.Stack;
  * <p>A biconnected component is a maximal subgraph that remains connected
  * after the removal of any single vertex.</p>
  *
+<<<<<<< HEAD
  * <h2>Requirements</h2>
+=======
+ * <h3>Requirements</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>The graph must be undirected.</li>
  * </ul>
  *
+<<<<<<< HEAD
  * <h2>Algorithm Overview</h2>
+=======
+ * <h3>Algorithm Overview</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <p>This implementation uses a depth-first search together with Tarjan's
  * low-link values and an edge stack to identify each biconnected
  * component.</p>
  *
+<<<<<<< HEAD
  * <h2>Complexity</h2>
+=======
+ * <h3>Complexity</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Time: O(V + E)</li>
  *     <li>Space: O(V + E)</li>
  * </ul>
  *
+<<<<<<< HEAD
  * <h2>Applications</h2>
+=======
+ * <h3>Applications</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Network decomposition.</li>

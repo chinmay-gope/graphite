@@ -14,7 +14,11 @@ import java.util.function.Function;
  * of varying sizes to evaluate scalability, stability, and performance
  * under increasing workloads.</p>
  *
+<<<<<<< HEAD
  * <h2>Typical Uses</h2>
+=======
+ * <h3>Typical Uses</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Algorithm scalability testing</li>

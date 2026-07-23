@@ -30,14 +30,22 @@ import io.graphite.result.TraversalResult;
  * TraversalResult dfs = graph.traversal().dfs(0);
  * }</pre>
  *
+<<<<<<< HEAD
  * <h2>Available Algorithms</h2>
+=======
+ * <h3>Available Algorithms</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Breadth-First Search (BFS)</li>
  *     <li>Depth-First Search (DFS)</li>
  * </ul>
  *
+<<<<<<< HEAD
  * <h2>Typical Applications</h2>
+=======
+ * <h3>Typical Applications</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Graph exploration</li>
@@ -47,7 +55,11 @@ import io.graphite.result.TraversalResult;
  *     <li>Path reconstruction</li>
  * </ul>
  *
+<<<<<<< HEAD
  * <h2>Implementation Notes</h2>
+=======
+ * <h3>Implementation Notes</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <p>This service contains no algorithmic state.
  * All algorithms are implemented as singleton instances and are safe to

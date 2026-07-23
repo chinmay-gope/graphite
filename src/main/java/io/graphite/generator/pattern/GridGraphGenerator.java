@@ -11,7 +11,11 @@ import io.graphite.graph.PatternGraphBuilder;
  * <p>Grid graphs arrange vertices in a rectangular lattice where each
  * vertex is connected to its adjacent horizontal and vertical neighbors.</p>
  *
+<<<<<<< HEAD
  * <h2>Applications</h2>
+=======
+ * <h3>Applications</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Pathfinding</li>

@@ -22,7 +22,11 @@ import java.util.PriorityQueue;
  * unvisited vertex. Starting from an arbitrary source, the tree grows until
  * all vertices have been included.</p>
  *
+<<<<<<< HEAD
  * <h2>Requirements</h2>
+=======
+ * <h3>Requirements</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>The graph must be undirected.</li>
@@ -30,20 +34,32 @@ import java.util.PriorityQueue;
  *     <li>Edge weights are required.</li>
  * </ul>
  *
+<<<<<<< HEAD
  * <h2>Algorithm Overview</h2>
+=======
+ * <h3>Algorithm Overview</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <p>This implementation uses a priority queue to efficiently select the
  * minimum-weight candidate edge at each step. Vertices already included in
  * the spanning tree are skipped to avoid cycles.</p>
  *
+<<<<<<< HEAD
  * <h2>Complexity</h2>
+=======
+ * <h3>Complexity</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Time: O(E log V)</li>
  *     <li>Space: O(V)</li>
  * </ul>
  *
+<<<<<<< HEAD
  * <h2>When to Use</h2>
+=======
+ * <h3>When to Use</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>When the graph is connected and weighted.</li>
@@ -51,7 +67,11 @@ import java.util.PriorityQueue;
  *     <li>When building an MST from a chosen starting vertex.</li>
  * </ul>
  *
+<<<<<<< HEAD
  * <h2>Applications</h2>
+=======
+ * <h3>Applications</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Communication network design</li>
@@ -60,7 +80,11 @@ import java.util.PriorityQueue;
  *     <li>Approximation algorithms</li>
  * </ul>
  *
+<<<<<<< HEAD
  * <h2>Implementation Notes</h2>
+=======
+ * <h3>Implementation Notes</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <p>This implementation validates that the graph is connected,
  * undirected, and weighted before execution.</p>
@@ -81,6 +105,10 @@ public class Prim extends GraphAlgorithm {
 
     public MSTResult findMST(IGraph graph, int source) {
         GraphPreconditions.requireGraph(graph);
+<<<<<<< HEAD
+=======
+        GraphPreconditions.requireActiveVertex(graph, source);
+>>>>>>> fec1ea5 (fix: java docs)
         GraphPreconditions.requireUndirected(graph);
 
         boolean[] visited = booleans(graph);

@@ -20,27 +20,43 @@ import java.util.*;
  * following unused edges and merging cycles until every edge has been
  * visited exactly once.</p>
  *
+<<<<<<< HEAD
  * <h2>Requirements</h2>
+=======
+ * <h3>Requirements</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>The graph must satisfy the conditions for an Euler path or
  *     Euler circuit.</li>
  * </ul>
  *
+<<<<<<< HEAD
  * <h2>Algorithm Overview</h2>
+=======
+ * <h3>Algorithm Overview</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <p>The algorithm incrementally builds the Eulerian traversal using a
  * stack, removing edges as they are traversed and backtracking whenever no
  * unused edges remain.</p>
  *
+<<<<<<< HEAD
  * <h2>Complexity</h2>
+=======
+ * <h3>Complexity</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Time: O(V + E)</li>
  *     <li>Space: O(V + E)</li>
  * </ul>
  *
+<<<<<<< HEAD
  * <h2>Applications</h2>
+=======
+ * <h3>Applications</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Route inspection</li>

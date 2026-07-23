@@ -19,20 +19,32 @@ import java.util.Queue;
  * If two adjacent vertices receive the same color, the graph is not
  * bipartite.</p>
  *
+<<<<<<< HEAD
  * <h2>Requirements</h2>
+=======
+ * <h3>Requirements</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Supports directed and undirected graphs.</li>
  * </ul>
  *
+<<<<<<< HEAD
  * <h2>Complexity</h2>
+=======
+ * <h3>Complexity</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Time: O(V + E)</li>
  *     <li>Space: O(V)</li>
  * </ul>
  *
+<<<<<<< HEAD
  * <h2>Applications</h2>
+=======
+ * <h3>Applications</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Matching problems</li>
@@ -62,7 +74,11 @@ public class BFSBipartiteChecker extends GraphAlgorithm implements BipartiteAlgo
      * disjoint sets such that every edge connects vertices from
      * different sets.</p>
      *
+<<<<<<< HEAD
      * <h2>Complexity</h2>
+=======
+     * <h3>Complexity</h3>
+>>>>>>> fec1ea5 (fix: java docs)
      *
      * <ul>
      *     <li>Time: O(V + E)</li>

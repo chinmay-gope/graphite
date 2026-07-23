@@ -36,7 +36,11 @@ import java.util.List;
  * graph.mst().prim();
  * }</pre>
  *
+<<<<<<< HEAD
  * <h2>Characteristics</h2>
+=======
+ * <h3>Characteristics</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Supports directed and undirected graphs.</li>
@@ -46,7 +50,11 @@ import java.util.List;
  *     <li>Supports graph formatting, transformation, validation, and analysis.</li>
  * </ul>
  *
+<<<<<<< HEAD
  * <h2>Implementation Notes</h2>
+=======
+ * <h3>Implementation Notes</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <p>Implementations are expected to maintain a valid graph state and perform
  * necessary validation before structural modifications or algorithm execution.
@@ -92,6 +100,16 @@ public interface IGraph {
 
     boolean hasEdge(int source, int destination);
 
+<<<<<<< HEAD
+=======
+    /**
+     * <p>Checks if the vertex is present in the graph</p>
+     *
+     * @param vertex node
+     * @return {@code true} if the vertex present in the graph,
+     * {@code false} otherwise
+     */
+>>>>>>> fec1ea5 (fix: java docs)
     boolean containsVertex(int vertex);
 
     int degree(int vertex);
@@ -99,6 +117,21 @@ public interface IGraph {
     boolean isEmpty();
 
     /**
+<<<<<<< HEAD
+=======
+     * Returns whether the given vertex is present in this graph.
+     *
+     * <p>A vertex is considered active if it was explicitly added
+     * or appears as the source or destination of at least one edge.</p>
+     *
+     * @param vertex vertex index
+     * @return {@code true} if the vertex exists in the graph,
+     * {@code false} otherwise
+     */
+    boolean isActiveVertex(int vertex);
+
+    /**
+>>>>>>> fec1ea5 (fix: java docs)
      * Returns whether this graph contains weighted edges.
      *
      * @return {@code true} if edge weights are significant;

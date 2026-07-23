@@ -13,7 +13,11 @@ import io.graphite.result.Colors;
  * columns corresponding to vertices. Matrix entries indicate whether an
  * edge exists and may include edge weights for weighted graphs.</p>
  *
+<<<<<<< HEAD
  * <h2>Applications</h2>
+=======
+ * <h3>Applications</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Dense graph visualization</li>
