@@ -15,8 +15,16 @@ public final class UndirectedGraph extends Graph {
     @Override
     public void addEdge(int source, int destination, int weight) {
 
+<<<<<<< HEAD
         validateVertex(source);
         validateVertex(destination);
+=======
+        validateVertexIndex(source);
+        validateVertexIndex(destination);
+
+        activeVertices[source] = true;
+        activeVertices[destination] = true;
+>>>>>>> fec1ea5 (fix: java docs)
 
         adjacencyList.get(source)
                 .add(new Edge(source, destination, weight));
@@ -24,6 +32,10 @@ public final class UndirectedGraph extends Graph {
         adjacencyList.get(destination)
                 .add(new Edge(destination, source, weight));
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> fec1ea5 (fix: java docs)
         edgeCount++;
     }
 
@@ -47,8 +59,13 @@ public final class UndirectedGraph extends Graph {
     @Override
     public void removeEdge(int source, int destination) {
 
+<<<<<<< HEAD
         validateVertex(source);
         validateVertex(destination);
+=======
+        validateVertexIndex(source);
+        validateVertexIndex(destination);
+>>>>>>> fec1ea5 (fix: java docs)
 
         boolean removed1 = adjacencyList.get(source)
                 .removeIf(edge -> edge.destination() == destination);

@@ -19,7 +19,11 @@ import io.graphite.builder.Graphs;
  * Graph graph = GraphFactory.undirected(configuration);
  * }</pre>
  *
+<<<<<<< HEAD
  * <h2>Design</h2>
+=======
+ * <h3>Design</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Centralizes graph creation.</li>

@@ -12,10 +12,14 @@ import io.graphite.graph.internal.ImmutableGraph;
 import io.graphite.io.writer.GraphWriterService;
 import io.graphite.model.Edge;
 
+<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.EnumMap;
 import java.util.List;
+=======
+import java.util.*;
+>>>>>>> fec1ea5 (fix: java docs)
 import java.util.function.Supplier;
 
 
@@ -41,7 +45,11 @@ import java.util.function.Supplier;
  * graph.mst().prim();
  * }</pre>
  *
+<<<<<<< HEAD
  * <h2>Features</h2>
+=======
+ * <h3>Features</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Mutable graph implementation.</li>
@@ -51,14 +59,22 @@ import java.util.function.Supplier;
  *     <li>Supports graph transformation and formatting.</li>
  * </ul>
  *
+<<<<<<< HEAD
  * <h2>Service Delegation</h2>
+=======
+ * <h3>Service Delegation</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <p>Algorithm execution is delegated to specialized service objects such as
  * {@code Traversal}, {@code ShortestPath}, and {@code MST}. Services are
  * created on first access and reused for the lifetime of the graph,
  * minimizing object allocation while keeping the public API clean.</p>
  *
+<<<<<<< HEAD
  * <h2>Thread Safety</h2>
+=======
+ * <h3>Thread Safety</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <p>This implementation is mutable and therefore not inherently
  * thread-safe. Concurrent modifications should be externally synchronized.</p>
@@ -77,11 +93,17 @@ public abstract class Graph implements IGraph {
     // Fields
     // ==========================================================
 
+<<<<<<< HEAD
+=======
+    protected int edgeCount;
+    protected final boolean[] activeVertices;
+>>>>>>> fec1ea5 (fix: java docs)
     protected final List<List<Edge>> adjacencyList;
     protected final GraphConfiguration configuration;
     private final EnumMap<GraphAPIType, GraphAPI> cache =
             new EnumMap<>(GraphAPIType.class);
 
+<<<<<<< HEAD
     // ==========================================================
     // Constructor
     // ==========================================================
@@ -90,21 +112,30 @@ public abstract class Graph implements IGraph {
     // ==========================================================
     // Internal Helpers
     // ==========================================================
+=======
+>>>>>>> fec1ea5 (fix: java docs)
 
     protected Graph(GraphConfiguration configuration) {
         this.configuration = configuration;
 
         adjacencyList = new ArrayList<>();
+<<<<<<< HEAD
+=======
+        activeVertices = new boolean[configuration.getVertices()];
+>>>>>>> fec1ea5 (fix: java docs)
 
         for (int i = 0; i < configuration.getVertices(); i++) {
             adjacencyList.add(new ArrayList<>());
         }
     }
 
+<<<<<<< HEAD
     // ==========================================================
     // Validation
     // ==========================================================
 
+=======
+>>>>>>> fec1ea5 (fix: java docs)
     protected GraphConfiguration configuration() {
         return configuration;
     }
@@ -113,12 +144,25 @@ public abstract class Graph implements IGraph {
     // Queries
     // ==========================================================
 
+<<<<<<< HEAD
     protected void validateVertex(int vertex) {
+=======
+    protected void validateVertexIndex(int vertex) {
+>>>>>>> fec1ea5 (fix: java docs)
 
         if (!containsVertex(vertex)) {
             throw new InvalidVertexException(vertex);
         }
     }
+<<<<<<< HEAD
+=======
+    protected void validateActiveVertex(int vertex) {
+
+        if (!isActiveVertex(vertex)) {
+            throw new InvalidVertexException(vertex);
+        }
+    }
+>>>>>>> fec1ea5 (fix: java docs)
 
     @Override
     public boolean containsVertex(int vertex) {
@@ -126,9 +170,20 @@ public abstract class Graph implements IGraph {
     }
 
     @Override
+<<<<<<< HEAD
     public int degree(int vertex) {
 
         validateVertex(vertex);
+=======
+    public boolean isActiveVertex(int vertex) {
+        return containsVertex(vertex) && activeVertices[vertex];
+    }
+
+    @Override
+    public int degree(int vertex) {
+
+        validateActiveVertex(vertex);
+>>>>>>> fec1ea5 (fix: java docs)
 
         return adjacencyList.get(vertex).size();
     }
@@ -140,8 +195,13 @@ public abstract class Graph implements IGraph {
     @Override
     public boolean hasEdge(int source, int destination) {
 
+<<<<<<< HEAD
         validateVertex(source);
         validateVertex(destination);
+=======
+        validateActiveVertex(source);
+        validateActiveVertex(destination);
+>>>>>>> fec1ea5 (fix: java docs)
 
         return adjacencyList.get(source).stream().anyMatch(edge -> edge.destination() == destination);
     }
@@ -149,7 +209,11 @@ public abstract class Graph implements IGraph {
     @Override
     public List<Edge> getNeighbors(int vertex) {
 
+<<<<<<< HEAD
         validateVertex(vertex);
+=======
+        validateActiveVertex(vertex);
+>>>>>>> fec1ea5 (fix: java docs)
 
         return Collections.unmodifiableList(adjacencyList.get(vertex));
     }
@@ -210,6 +274,11 @@ public abstract class Graph implements IGraph {
 
         adjacencyList.forEach(List::clear);
 
+<<<<<<< HEAD
+=======
+        Arrays.fill(activeVertices, false);
+
+>>>>>>> fec1ea5 (fix: java docs)
         edgeCount = 0;
     }
 
@@ -272,7 +341,13 @@ public abstract class Graph implements IGraph {
         List<Integer> vertices = new ArrayList<>();
 
         for (int i = 0; i < getVertices(); i++) {
+<<<<<<< HEAD
             vertices.add(i);
+=======
+            if (isActiveVertex(i)) {
+            vertices.add(i);
+            }
+>>>>>>> fec1ea5 (fix: java docs)
         }
 
         return Collections.unmodifiableList(vertices);
@@ -337,10 +412,13 @@ public abstract class Graph implements IGraph {
         return service(GraphAPIType.BIPARTITE, () -> new Bipartite(this));
     }
 
+<<<<<<< HEAD
     // ==========================================================
     // Analysis
     // ==========================================================
 
+=======
+>>>>>>> fec1ea5 (fix: java docs)
     @Override
     public GraphAnalysis analysis() {
         return service(GraphAPIType.ANALYSIS, () -> new GraphAnalysisService(this));

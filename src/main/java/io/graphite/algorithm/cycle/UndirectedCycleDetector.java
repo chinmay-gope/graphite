@@ -14,25 +14,41 @@ import io.graphite.validation.GraphPreconditions;
  * parent of each visited vertex. A cycle exists whenever an already visited
  * neighbor is encountered that is not the current vertex's parent.</p>
  *
+<<<<<<< HEAD
  * <h2>Requirements</h2>
+=======
+ * <h3>Requirements</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>The graph must be undirected.</li>
  * </ul>
  *
+<<<<<<< HEAD
  * <h2>Algorithm Overview</h2>
+=======
+ * <h3>Algorithm Overview</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <p>Each connected component is explored using DFS. Parent tracking
  * distinguishes legitimate backtracking from actual cycles.</p>
  *
+<<<<<<< HEAD
  * <h2>Complexity</h2>
+=======
+ * <h3>Complexity</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Time: O(V + E)</li>
  *     <li>Space: O(V)</li>
  * </ul>
  *
+<<<<<<< HEAD
  * <h2>Applications</h2>
+=======
+ * <h3>Applications</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Graph validation</li>

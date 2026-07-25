@@ -21,7 +21,11 @@ import java.util.List;
  * edges in non-decreasing order of weight and repeatedly selecting the next
  * lightest edge that does not create a cycle.</p>
  *
+<<<<<<< HEAD
  * <h2>Requirements</h2>
+=======
+ * <h3>Requirements</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>The graph must be undirected.</li>
@@ -29,20 +33,32 @@ import java.util.List;
  *     <li>Edge weights are required.</li>
  * </ul>
  *
+<<<<<<< HEAD
  * <h2>Algorithm Overview</h2>
+=======
+ * <h3>Algorithm Overview</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <p>This implementation sorts the edge set once and uses the Union-Find
  * (Disjoint Set Union) data structure to efficiently detect cycles while
  * constructing the spanning tree.</p>
  *
+<<<<<<< HEAD
  * <h2>Complexity</h2>
+=======
+ * <h3>Complexity</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Time: O(E log E)</li>
  *     <li>Space: O(V)</li>
  * </ul>
  *
+<<<<<<< HEAD
  * <h2>When to Use</h2>
+=======
+ * <h3>When to Use</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>For sparse weighted graphs.</li>
@@ -50,7 +66,11 @@ import java.util.List;
  *     <li>When Union-Find provides efficient cycle detection.</li>
  * </ul>
  *
+<<<<<<< HEAD
  * <h2>Applications</h2>
+=======
+ * <h3>Applications</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Network optimization</li>
@@ -59,7 +79,11 @@ import java.util.List;
  *     <li>Hierarchical clustering</li>
  * </ul>
  *
+<<<<<<< HEAD
  * <h2>Implementation Notes</h2>
+=======
+ * <h3>Implementation Notes</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <p>This implementation relies on the Union-Find data structure with path
  * compression and union by rank to efficiently detect cycles.</p>

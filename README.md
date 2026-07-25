@@ -1,11 +1,20 @@
 # Graphite V2
 
+<<<<<<< HEAD
 <p align="center">
   <b>A modern, lightweight, immutable-first Java graph library.</b><br>
   Build graphs • Analyze graphs • Generate graphs • Benchmark algorithms
 </p>
 
 <p align="center">
+=======
+<div style="text-align: center;">
+  <b>A modern, lightweight, immutable-first Java graph library.</b><br>
+  Build graphs • Analyze graphs • Generate graphs • Benchmark algorithms
+</div>
+
+<div style="text-align: center;">
+>>>>>>> fec1ea5 (fix: java docs)
 
 ![Java](https://img.shields.io/badge/Java-21+-orange)
 ![Version](https://img.shields.io/badge/Version-2.0-blue)
@@ -13,7 +22,11 @@
 ![Algorithms](https://img.shields.io/badge/Algorithms-15%2B-success)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
+<<<<<<< HEAD
 </p>
+=======
+</div>
+>>>>>>> fec1ea5 (fix: java docs)
 
 ---
 

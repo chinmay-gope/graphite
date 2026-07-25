@@ -20,7 +20,11 @@ import io.graphite.print.formatter.*;
  * GraphPrinter.json(graph);
  * }</pre>
  *
+<<<<<<< HEAD
  * <h2>Supported Formats</h2>
+=======
+ * <h3>Supported Formats</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Compact</li>

@@ -9,7 +9,11 @@ import io.graphite.result.BenchmarkResult;
  * of a benchmark before producing a {@link BenchmarkResult} containing
  * timing statistics.</p>
  *
+<<<<<<< HEAD
  * <h2>Responsibilities</h2>
+=======
+ * <h3>Responsibilities</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Warm-up execution</li>

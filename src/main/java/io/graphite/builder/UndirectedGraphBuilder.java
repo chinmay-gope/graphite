@@ -10,7 +10,11 @@ import io.graphite.graph.UndirectedGraph;
  * undirected graphs while providing configuration options for graph
  * structure and edge insertion.</p>
  *
+<<<<<<< HEAD
  * <h2>Features</h2>
+=======
+ * <h3>Features</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Fluent API</li>

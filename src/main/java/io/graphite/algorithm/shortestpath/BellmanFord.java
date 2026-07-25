@@ -18,7 +18,11 @@ import java.util.List;
  * every edge until no shorter paths can be found and additionally detects
  * negative-weight cycles.</p>
  *
+<<<<<<< HEAD
  * <h2>Requirements</h2>
+=======
+ * <h3>Requirements</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Supports directed and undirected graphs.</li>
@@ -26,20 +30,32 @@ import java.util.List;
  *     <li>The source vertex must exist.</li>
  * </ul>
  *
+<<<<<<< HEAD
  * <h2>Algorithm Overview</h2>
+=======
+ * <h3>Algorithm Overview</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <p>The algorithm performs |V|-1 relaxation passes over all edges, followed
  * by one additional pass to determine whether a negative-weight cycle is
  * reachable from the source vertex.</p>
  *
+<<<<<<< HEAD
  * <h2>Complexity</h2>
+=======
+ * <h3>Complexity</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Time: O(V × E)</li>
  *     <li>Space: O(V)</li>
  * </ul>
  *
+<<<<<<< HEAD
  * <h2>Applications</h2>
+=======
+ * <h3>Applications</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Currency arbitrage detection</li>
@@ -47,14 +63,22 @@ import java.util.List;
  *     <li>Graphs containing negative edge weights</li>
  * </ul>
  *
+<<<<<<< HEAD
  * <h2>When to Use</h2>
+=======
+ * <h3>When to Use</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>When negative edge weights may exist.</li>
  *     <li>When negative cycle detection is required.</li>
  * </ul>
  *
+<<<<<<< HEAD
  * <h2>Implementation Notes</h2>
+=======
+ * <h3>Implementation Notes</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <p>If a negative-weight cycle is detected, this implementation throws
  * {@link NegativeCycleException} because shortest paths are undefined.</p>

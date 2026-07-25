@@ -12,14 +12,22 @@ import java.util.List;
  * <p>An {@code MSTResult} contains every edge included in the spanning tree
  * together with its total weight.</p>
  *
+<<<<<<< HEAD
  * <h2>Contents</h2>
+=======
+ * <br>Contents</br>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>MST edges</li>
  *     <li>Total weight</li>
  * </ul>
  *
+<<<<<<< HEAD
  * <h2>Immutability</h2>
+=======
+ * <br>Immutability</br>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <p>This result object is immutable.</p>
  *

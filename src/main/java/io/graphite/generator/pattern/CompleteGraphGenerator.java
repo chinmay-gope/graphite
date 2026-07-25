@@ -12,7 +12,11 @@ import io.graphite.graph.PatternGraphBuilder;
  * vertices. Complete graphs represent the maximum possible connectivity
  * for a graph of a given size.</p>
  *
+<<<<<<< HEAD
  * <h2>Characteristics</h2>
+=======
+ * <h3>Characteristics</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Every vertex is adjacent to every other vertex.</li>

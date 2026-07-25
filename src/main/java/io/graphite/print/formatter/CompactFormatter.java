@@ -14,7 +14,11 @@ import io.graphite.result.Colors;
  * intended for console output, debugging, examples, and general inspection
  * of graph structure.</p>
  *
+<<<<<<< HEAD
  * <h2>Output Characteristics</h2>
+=======
+ * <h3>Output Characteristics</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Readable adjacency-list layout</li>

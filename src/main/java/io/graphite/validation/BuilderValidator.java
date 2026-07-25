@@ -3,7 +3,11 @@ package io.graphite.validation;
 
 import io.graphite.builder.GraphConfiguration;
 import io.graphite.exception.graph.InvalidGraphConfigurationException;
+<<<<<<< HEAD
 import io.graphite.generator.RandomGraphBuilder;
+=======
+import io.graphite.builder.RandomGraphBuilder;
+>>>>>>> fec1ea5 (fix: java docs)
 import io.graphite.graph.PatternGraphBuilder;
 
 /**
@@ -13,7 +17,11 @@ import io.graphite.graph.PatternGraphBuilder;
  * vertex count, edge count, weight ranges, and graph configuration are
  * internally consistent before graph generation begins.</p>
  *
+<<<<<<< HEAD
  * <h2>Typical Validations</h2>
+=======
+ * <h3>Typical Validations</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Vertex count</li>

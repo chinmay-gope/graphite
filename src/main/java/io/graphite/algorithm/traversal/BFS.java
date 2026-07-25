@@ -21,27 +21,43 @@ import java.util.Queue;
  * order of their shortest distance (measured in edges) from the source in
  * an unweighted graph.</p>
  *
+<<<<<<< HEAD
  * <h2>Requirements</h2>
+=======
+ * <h3>Requirements</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Supports directed and undirected graphs.</li>
  *     <li>The source vertex must exist.</li>
  * </ul>
  *
+<<<<<<< HEAD
  * <h2>Algorithm Overview</h2>
+=======
+ * <h3>Algorithm Overview</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <p>This implementation uses a queue to process vertices in FIFO order.
  * Each vertex is visited at most once, producing an efficient linear-time
  * traversal.</p>
  *
+<<<<<<< HEAD
  * <h2>Complexity</h2>
+=======
+ * <h3>Complexity</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Time: O(V + E)</li>
  *     <li>Space: O(V)</li>
  * </ul>
  *
+<<<<<<< HEAD
  * <h2>Applications</h2>
+=======
+ * <h3>Applications</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Shortest paths in unweighted graphs</li>
@@ -50,7 +66,11 @@ import java.util.Queue;
  *     <li>Network broadcasting</li>
  * </ul>
  *
+<<<<<<< HEAD
  * <h2>Implementation Notes</h2>
+=======
+ * <h3>Implementation Notes</h3>
+>>>>>>> fec1ea5 (fix: java docs)
  *
  * <p>This implementation is stateless and exposed as a singleton through
  * {@code INSTANCE}.</p>
@@ -73,7 +93,11 @@ public class BFS extends GraphAlgorithm implements TraversalAlgorithm {
     public TraversalResult traverse(IGraph graph, int source) {
 
         GraphPreconditions.requireGraph(graph);
+<<<<<<< HEAD
         GraphPreconditions.requireVertex(graph, source);
+=======
+        GraphPreconditions.requireActiveVertex(graph, source);
+>>>>>>> fec1ea5 (fix: java docs)
 
         boolean[] visited = booleans(graph);
 
