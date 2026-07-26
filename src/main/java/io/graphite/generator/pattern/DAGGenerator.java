@@ -43,43 +43,47 @@ public final class DAGGenerator {
             int vertices,
             int edges) {
 
-        // validation
         if (vertices <= 0) {
             throw new InvalidGraphConfigurationException(
                     "DAG requires at least one vertex.");
         }
 
-        if (edges < 0) {
-            throw new InvalidGraphConfigurationException(
-                    "Edge count cannot be negative.");
-        }
-
         int maxEdges = vertices * (vertices - 1) / 2;
+
+        if (edges < vertices - 1) {
+            throw new InvalidGraphConfigurationException(
+                    "Connected DAG requires at least " + (vertices - 1) + " edges.");
+        }
 
         if (edges > maxEdges) {
             throw new InvalidGraphConfigurationException(
-                    "A DAG with " + vertices + " vertices can contain at most "
-                            + maxEdges + " edges.");
+                    "Maximum edges = " + maxEdges);
         }
 
         var builder = Graphs.directed()
                 .vertices(vertices);
 
-        ThreadLocalRandom random =
-                ThreadLocalRandom.current();
+        ThreadLocalRandom random = ThreadLocalRandom.current();
 
-        Set<EdgeKey> used =
-                new HashSet<>();
+        Set<EdgeKey> used = new HashSet<>();
 
+        // Step 1: Build a connected backbone
+        for (int i = 0; i < vertices - 1; i++) {
+            builder.addEdge(i, i + 1);
+            used.add(new EdgeKey(i, i + 1));
+        }
+
+        System.out.println("Generated edges = " + used.size());
+
+        // Step 2: Add remaining forward edges
         while (used.size() < edges) {
 
-            int source =
-                    random.nextInt(vertices - 1);
+            int source = random.nextInt(vertices - 1);
+            int destination = random.nextInt(source + 1, vertices);
 
-            int destination =
-                    random.nextInt(source + 1, vertices);
+            EdgeKey edge = new EdgeKey(source, destination);
 
-            if (used.add(new EdgeKey(source, destination))) {
+            if (used.add(edge)) {
                 builder.addEdge(source, destination);
             }
         }
