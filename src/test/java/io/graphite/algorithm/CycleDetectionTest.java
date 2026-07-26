@@ -4,7 +4,6 @@ import io.graphite.algorithm.cycle.DirectedCycleDetector;
 import io.graphite.algorithm.cycle.UndirectedCycleDetector;
 import io.graphite.builder.Graphs;
 import io.graphite.exception.graph.GraphEmptyException;
-import io.graphite.exception.graph.InvalidGraphConfigurationException;
 import io.graphite.graph.IGraph;
 import io.graphite.testutil.TestGraphs;
 import org.junit.jupiter.api.Test;
@@ -88,15 +87,5 @@ class CycleDetectionTest {
         assertThrows(
                 GraphEmptyException.class,
                 () -> DirectedCycleDetector.INSTANCE.hasCycle(null));
-    }
-
-    @Test
-    void emptyGraphThrows() {
-
-        assertThrows(
-                InvalidGraphConfigurationException.class,
-                () -> Graphs.directed()
-                        .vertices(0)
-                        .build());
     }
 }

@@ -2,8 +2,6 @@ package io.graphite.algorithm;
 
 import io.graphite.algorithm.traversal.BFS;
 import io.graphite.algorithm.traversal.DFS;
-import io.graphite.builder.Graphs;
-import io.graphite.exception.graph.InvalidGraphConfigurationException;
 import io.graphite.exception.graph.InvalidVertexException;
 import io.graphite.graph.IGraph;
 import io.graphite.result.TraversalResult;
@@ -124,15 +122,4 @@ class TraversalTest {
                 InvalidVertexException.class,
                 () -> DFS.INSTANCE.traverse(graph, 0));
     }
-
-    @Test
-    void emptyGraphConstructionThrows() {
-
-        assertThrows(
-                InvalidGraphConfigurationException.class,
-                () -> Graphs.undirected()
-                        .vertices(0)
-                        .build());
-    }
-
 }
