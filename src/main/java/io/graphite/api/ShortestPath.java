@@ -4,9 +4,9 @@ import io.graphite.algorithm.shortestpath.BellmanFord;
 import io.graphite.algorithm.shortestpath.Dijkstra;
 import io.graphite.algorithm.shortestpath.FloydWarshall;
 import io.graphite.api.internal.GraphAPI;
+import io.graphite.exception.graph.GraphEmptyException;
 import io.graphite.exception.algorithm.NegativeCycleException;
 import io.graphite.exception.algorithm.NegativeWeightException;
-import io.graphite.exception.algorithm.NullGraphException;
 import io.graphite.exception.graph.InvalidVertexException;
 import io.graphite.graph.IGraph;
 import io.graphite.result.AllPairsShortestPathResult;
@@ -94,7 +94,7 @@ public final class ShortestPath extends GraphAPI {
      *
      * @param source the source vertex
      * @return the computed shortest path result
-     * @throws NullGraphException     if graph is null
+     * @throws GraphEmptyException     if graph is null
      * @throws InvalidVertexException     if  vertex is invalid
      * @throws NegativeCycleException if the graph contains negative weight cycles
      * @see #dijkstra(int)

@@ -13,10 +13,6 @@ public final class AlgorithmVerifier {
     private AlgorithmVerifier() {
     }
 
-    // ---------------------------------------------------------
-    // Shortest Paths
-    // ---------------------------------------------------------
-
     public static void verifyShortestPaths(
             IGraph graph,
             int source
@@ -34,10 +30,6 @@ public final class AlgorithmVerifier {
                 "Dijkstra and Bellman-Ford disagree."
         );
     }
-
-    // ---------------------------------------------------------
-    // MST
-    // ---------------------------------------------------------
 
     public static void verifyMST(
             IGraph graph
@@ -61,10 +53,6 @@ public final class AlgorithmVerifier {
                 "Prim and Kruskal produced different edge counts."
         );
     }
-
-    // ---------------------------------------------------------
-    // Topology
-    // ---------------------------------------------------------
 
     public static void verifyTopology(
             IGraph graph

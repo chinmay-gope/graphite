@@ -1,7 +1,7 @@
 package io.graphite.graph;
 
 import io.graphite.builder.Graphs;
-import io.graphite.exception.GraphEmptyException;
+import io.graphite.exception.graph.GraphEmptyException;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

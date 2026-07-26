@@ -2,7 +2,7 @@ package io.graphite.api;
 
 import io.graphite.algorithm.euler.Hierholzer;
 import io.graphite.api.internal.GraphAPI;
-import io.graphite.exception.algorithm.NullGraphException;
+import io.graphite.exception.graph.GraphEmptyException;
 import io.graphite.graph.IGraph;
 import io.graphite.result.EulerResult;
 
@@ -67,7 +67,7 @@ public final class Euler extends GraphAPI {
      *
      * @return {@code true} if an Euler path exists;
      * {@code false} otherwise
-     * @throws NullGraphException if the graph is {@code null}
+     * @throws GraphEmptyException if the graph is {@code null}
      * @see #circuit()
      * @since 2.0
      */
@@ -100,7 +100,7 @@ public final class Euler extends GraphAPI {
      *
      * @return {@code true} if an Euler circuit exists;
      * {@code false} otherwise
-     * @throws NullGraphException if the graph is {@code null}
+     * @throws GraphEmptyException if the graph is {@code null}
      * @see #path()
      * @since 2.0
      */

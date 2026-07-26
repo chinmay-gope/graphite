@@ -6,7 +6,7 @@ import io.graphite.api.analysis.GraphAnalysisService;
 import io.graphite.api.internal.GraphAPI;
 import io.graphite.builder.GraphConfiguration;
 import io.graphite.builder.Graphs;
-import io.graphite.exception.GraphEmptyException;
+import io.graphite.exception.graph.GraphEmptyException;
 import io.graphite.exception.graph.InvalidVertexException;
 import io.graphite.graph.internal.GraphAPIType;
 import io.graphite.graph.internal.ImmutableGraph;

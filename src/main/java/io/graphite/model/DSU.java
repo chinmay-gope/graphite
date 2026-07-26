@@ -13,28 +13,6 @@ public class DSU {
         }
     }
 
-    static void main() {
-        DSU dsu = new DSU(6);
-
-        System.out.println(dsu.connected(0, 1));
-
-        dsu.union(0, 1);
-
-        System.out.println(dsu.connected(0, 1));
-
-        dsu.union(1, 2);
-
-        System.out.println(dsu.connected(0, 2));
-
-        dsu.union(3, 4);
-
-        System.out.println(dsu.connected(2, 4));
-
-        dsu.union(2, 4);
-
-        System.out.println(dsu.connected(2, 4));
-    }
-
     public int find(int vertex) {
         if (parent[vertex] != vertex) {
             parent[vertex] = find(parent[vertex]);

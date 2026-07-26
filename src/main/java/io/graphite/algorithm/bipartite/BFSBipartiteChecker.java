@@ -3,7 +3,7 @@ package io.graphite.algorithm.bipartite;
 import io.graphite.algorithm.GraphAlgorithm;
 import io.graphite.algorithm.traversal.BFS;
 import io.graphite.api.Bipartite;
-import io.graphite.exception.algorithm.NullGraphException;
+import io.graphite.exception.graph.GraphEmptyException;
 import io.graphite.graph.IGraph;
 import io.graphite.model.Edge;
 import io.graphite.validation.GraphPreconditions;
@@ -76,7 +76,7 @@ public class BFSBipartiteChecker extends GraphAlgorithm implements BipartiteAlgo
      *
      * @return {@code true} if the graph is bipartite;
      * {@code false} otherwise
-     * @throws NullGraphException if the graph is {@code null}
+     * @throws GraphEmptyException if the graph is {@code null}
      * @since 2.0
      */
     @Override

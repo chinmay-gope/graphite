@@ -3,8 +3,8 @@ package io.graphite.api;
 import io.graphite.algorithm.mst.Kruskal;
 import io.graphite.algorithm.mst.Prim;
 import io.graphite.api.internal.GraphAPI;
-import io.graphite.exception.algorithm.NullGraphException;
 import io.graphite.exception.graph.GraphDisconnectedException;
+import io.graphite.exception.graph.GraphEmptyException;
 import io.graphite.exception.graph.UnsupportedGraphTypeException;
 import io.graphite.graph.IGraph;
 import io.graphite.result.MSTResult;
@@ -81,7 +81,7 @@ public final class MST extends GraphAPI {
      * </ul>
      *
      * @return the computed minimum spanning tree
-     * @throws NullGraphException        if the graph is {@code null}
+     * @throws GraphEmptyException        if the graph is {@code null}
      * @throws UnsupportedGraphTypeException if the graph is directed
      * @throws GraphDisconnectedException    if the graph is disconnected
      * @see #kruskal()
@@ -112,7 +112,7 @@ public final class MST extends GraphAPI {
      * </ul>
      *
      * @return the computed minimum spanning tree
-     * @throws NullGraphException        if the graph is {@code null}
+     * @throws GraphEmptyException        if the graph is {@code null}
      * @throws UnsupportedGraphTypeException if the graph is directed
      * @throws GraphDisconnectedException    if the graph is disconnected
      * @see #prim(int)

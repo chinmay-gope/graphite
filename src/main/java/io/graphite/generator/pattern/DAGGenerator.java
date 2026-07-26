@@ -73,8 +73,6 @@ public final class DAGGenerator {
             used.add(new EdgeKey(i, i + 1));
         }
 
-        System.out.println("Generated edges = " + used.size());
-
         // Step 2: Add remaining forward edges
         while (used.size() < edges) {
 

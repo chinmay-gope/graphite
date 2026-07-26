@@ -1,8 +1,8 @@
 package io.graphite.validation;
 
 import io.graphite.exception.algorithm.NegativeWeightException;
-import io.graphite.exception.algorithm.NullGraphException;
 import io.graphite.exception.algorithm.UnsupportedWeightedGraphException;
+import io.graphite.exception.graph.GraphEmptyException;
 import io.graphite.exception.graph.InvalidVertexException;
 import io.graphite.exception.graph.UnsupportedGraphTypeException;
 import io.graphite.graph.IGraph;
@@ -53,7 +53,7 @@ public final class GraphPreconditions {
     public static void requireGraph(IGraph graph) {
 
         if (graph == null) {
-            throw new NullGraphException();
+            throw new GraphEmptyException("Graph is empty.");
         }
     }
 

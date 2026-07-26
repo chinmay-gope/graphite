@@ -3,7 +3,6 @@ package io.graphite.graph;
 import io.graphite.builder.Graphs;
 import org.junit.jupiter.api.Test;
 
-import static io.graphite.testutil.GraphAssertions.edgeExists;
 import static org.junit.jupiter.api.Assertions.*;
 
 class GraphCopierTest {
@@ -67,4 +66,10 @@ class GraphCopierTest {
         assertEquals(graph.edgeCount(), copy.edgeCount());
         assertEquals(graph.getEdges(), copy.getEdges());
     }
+
+    private static boolean edgeExists(IGraph graph, int u, int v) {
+        return graph.getNeighbors(u).stream()
+                .anyMatch(e -> e.destination() == v);
+    }
+
 }

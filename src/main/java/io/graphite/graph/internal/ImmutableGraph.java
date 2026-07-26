@@ -2,7 +2,6 @@ package io.graphite.graph.internal;
 
 import io.graphite.api.*;
 import io.graphite.api.analysis.GraphAnalysis;
-import io.graphite.builder.GraphConfiguration;
 import io.graphite.exception.graph.ImmutableGraphException;
 import io.graphite.graph.Graph;
 import io.graphite.graph.IGraph;
