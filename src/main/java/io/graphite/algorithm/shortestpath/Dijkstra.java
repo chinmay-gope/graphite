@@ -20,11 +20,11 @@ import java.util.PriorityQueue;
  * known distance and relaxes its outgoing edges until all reachable vertices
  * have been processed.</p>
  *
-<<<<<<< HEAD
+
  * <h2>Requirements</h2>
-=======
+
  * <h3>Requirements</h3>
->>>>>>> fec1ea5 (fix: java docs)
+
  *
  * <ul>
  *     <li>Supports directed and undirected graphs.</li>
@@ -32,32 +32,32 @@ import java.util.PriorityQueue;
  *     <li>The source vertex must exist.</li>
  * </ul>
  *
-<<<<<<< HEAD
+
  * <h2>Algorithm Overview</h2>
-=======
+
  * <h3>Algorithm Overview</h3>
->>>>>>> fec1ea5 (fix: java docs)
+
  *
  * <p>This implementation uses a priority queue (min-heap) to efficiently
  * select the next closest vertex. Whenever a shorter path is discovered,
  * the corresponding distance is updated through edge relaxation.</p>
  *
-<<<<<<< HEAD
+
  * <h2>Complexity</h2>
-=======
+
  * <h3>Complexity</h3>
->>>>>>> fec1ea5 (fix: java docs)
+
  *
  * <ul>
  *     <li>Time: O((V + E) log V)</li>
  *     <li>Space: O(V)</li>
  * </ul>
  *
-<<<<<<< HEAD
+
  * <h2>Applications</h2>
-=======
+
  * <h3>Applications</h3>
->>>>>>> fec1ea5 (fix: java docs)
+
  *
  * <ul>
  *     <li>GPS and navigation systems</li>
@@ -66,11 +66,11 @@ import java.util.PriorityQueue;
  *     <li>Transportation planning</li>
  * </ul>
  *
-<<<<<<< HEAD
+
  * <h2>When to Use</h2>
-=======
+
  * <h3>When to Use</h3>
->>>>>>> fec1ea5 (fix: java docs)
+
  *
  * <ul>
  *     <li>When all edge weights are non-negative.</li>
@@ -78,11 +78,11 @@ import java.util.PriorityQueue;
  *     <li>When performance is important on sparse graphs.</li>
  * </ul>
  *
-<<<<<<< HEAD
+
  * <h2>Implementation Notes</h2>
-=======
+
  * <h3>Implementation Notes</h3>
->>>>>>> fec1ea5 (fix: java docs)
+
  *
  * <p>This implementation validates that the graph contains no negative edge
  * weights before execution. If a negative edge is detected, a
@@ -116,11 +116,11 @@ public class Dijkstra extends GraphAlgorithm implements ShortestPathAlgorithm {
     @Override
     public ShortestPathResult shortestPath(IGraph graph, int source) {
         GraphPreconditions.requireGraph(graph);
-<<<<<<< HEAD
+
         GraphPreconditions.requireVertex(graph, source);
-=======
+
         GraphPreconditions.requireActiveVertex(graph, source);
->>>>>>> fec1ea5 (fix: java docs)
+
         GraphPreconditions.requireNonNegative(graph);
 
         int[] distance = ints(graph, Integer.MAX_VALUE);

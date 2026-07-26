@@ -1,6 +1,7 @@
 package io.graphite.benchmark.algorithm;
 
 import io.graphite.algorithm.euler.Hierholzer;
+import io.graphite.benchmark.AbstractBenchmark;
 import io.graphite.generator.example.GraphExampleGenerator;
 import io.graphite.graph.IGraph;
 

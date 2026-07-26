@@ -9,7 +9,7 @@ public class GraphExampleGenerator {
 
     public static final GraphExampleGenerator INSTANCE = new GraphExampleGenerator();
 
-    private GraphExampleGenerator() {
+    public GraphExampleGenerator() {
 
     }
 

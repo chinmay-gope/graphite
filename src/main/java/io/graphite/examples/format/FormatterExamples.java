@@ -136,4 +136,8 @@ public class FormatterExamples {
         stats();
     }
 
+    public static void main(String[] args) {
+        run();
+    }
+
 }

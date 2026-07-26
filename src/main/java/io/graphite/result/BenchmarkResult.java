@@ -1,7 +1,7 @@
 package io.graphite.result;
 
-import io.graphite.benchmark.Benchmark;
 import io.graphite.benchmark.BenchmarkRunner;
+import io.graphite.benchmark.Benchmarks;
 
 /**
  * Represents the outcome of a benchmark execution.
@@ -9,15 +9,13 @@ import io.graphite.benchmark.BenchmarkRunner;
  * <p>A {@code BenchmarkResult} stores execution statistics collected during
  * repeated benchmark iterations.</p>
  *
-<<<<<<< HEAD
+
  * <h2>
  * Contents
  * </h2>
-=======
  * <br>
  * Contents
  * </br>
->>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Average execution time</li>
@@ -28,17 +26,18 @@ import io.graphite.benchmark.BenchmarkRunner;
  *
  * @author Chinmay
  * @version 2.0
- * @see Benchmark
+ * @see Benchmarks
  * @see BenchmarkRunner
  * @since 2.0
  */
 public record BenchmarkResult(
         // ---------------------------------------------------------
-        // Benchmark
+        // Benchmarks
         // ---------------------------------------------------------
         String name,
         int warmup,
         int iterations,
+        int skipped,
         // ---------------------------------------------------------
         // Performance
         // ---------------------------------------------------------
@@ -48,5 +47,29 @@ public record BenchmarkResult(
         double maximumMillis,
         double standardDeviation,
         double operationsPerSecond
-) {
+) implements Colors {
+
+    @Override
+    public String toString() {
+        return String.format(
+                "%n%s%s▶ %s%s%n" +
+                        "%-20s : %s%d%s%n" +
+                        "%-20s : %s%d%s%n" +
+                        "%-20s : %s%d%s%n" +
+                        "%-20s : %s%.3f ms%s%n" +
+                        "%-20s : %s%.3f ms%s%n" +
+                        "%-20s : %s%.3f ms%s%n" +
+                        "%-20s : %s%.3f ms%s%n" +
+                        "%-20s : %s%.3f ops/sec%s%n",
+                BOLD, CYAN, name, RESET,
+                "Warmup", YELLOW, warmup, RESET,
+                "Iterations", YELLOW, iterations, RESET,
+                "Skipped Iterations", YELLOW, skipped, RESET,
+                "Average", CYAN, averageMillis, RESET,
+                "Minimum", GREEN, minimumMillis, RESET,
+                "Maximum", RED, maximumMillis, RESET,
+                "Std Deviation", MAGENTA, standardDeviation, RESET,
+                "Ops/sec", BLUE, operationsPerSecond, RESET
+        );
+    }
 }

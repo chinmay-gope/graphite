@@ -14,21 +14,21 @@ import java.util.function.Function;
  * of varying sizes to evaluate scalability, stability, and performance
  * under increasing workloads.</p>
  *
-<<<<<<< HEAD
+
  * <h2>Typical Uses</h2>
-=======
+
  * <h3>Typical Uses</h3>
->>>>>>> fec1ea5 (fix: java docs)
+
  *
  * <ul>
  *     <li>Algorithm scalability testing</li>
  *     <li>Performance regression detection</li>
- *     <li>Benchmark comparison</li>
+ *     <li>Benchmarks comparison</li>
  * </ul>
  *
  * @author Chinmay
  * @version 2.0
- * @see Benchmark
+ * @see Benchmarks
  * @see BenchmarkRunner
  * @since 2.0
  */

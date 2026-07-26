@@ -1,8 +1,5 @@
-package io.graphite.benchmark.algorithm;
+package io.graphite.benchmark;
 
-import io.graphite.benchmark.Benchmark;
-import io.graphite.benchmark.BenchmarkPrinter;
-import io.graphite.benchmark.BenchmarkTask;
 import io.graphite.graph.IGraph;
 import io.graphite.result.BenchmarkResult;
 
@@ -18,7 +15,7 @@ import io.graphite.result.BenchmarkResult;
  *
  * @author Chinmay
  * @version 2.0
- * @see Benchmark
+ * @see Benchmarks
  * @see BenchmarkResult
  * @since 2.0
  */
@@ -32,7 +29,7 @@ public abstract class AbstractBenchmark {
             IGraph graph,
             BenchmarkTask task
     ) {
-        BenchmarkResult result = Benchmark.builder()
+        BenchmarkResult result = Benchmarks.builder()
                 .name(name)
                 .graph(graph)
                 .task(task)
@@ -41,7 +38,7 @@ public abstract class AbstractBenchmark {
                 .build()
                 .run();
 
-        BenchmarkPrinter.print(result);
+        System.out.println(result);
 
         return result;
     }

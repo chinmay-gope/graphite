@@ -2,8 +2,8 @@
 
 Graph Summary
 
-  Vertices     : 6
-  Edges        : 5
+  Vertices     : 4
+  Edges        : 3
   Directed     : No
   Weighted     : No
   Connected    : Yes
@@ -12,8 +12,8 @@ Graph Summary
   Forest       : Yes
   Bipartite    : Yes
   Eulerian     : No
-  Density      : 0.3333
-  Avg Degree   : 1.67
+  Density      : 0.5000
+  Avg Degree   : 1.50
   Max Degree   : 2
   Min Degree   : 1
 
@@ -21,7 +21,5 @@ Graph Summary
 Index  Source          Destination               
 -----------------------------------------------
 [001]   0               1              
-[002]   1               2              
-[003]   2               3              
-[004]   3               4              
-[005]   4               5              
+[002]   0               2              
+[003]   1               3              

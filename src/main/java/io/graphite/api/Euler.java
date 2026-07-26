@@ -17,11 +17,11 @@ import io.graphite.result.EulerResult;
  *         graph.euler().findEulerCircuit();
  * }</pre>
  *
-<<<<<<< HEAD
+
  * <h2>Typical Applications</h2>
-=======
+
  * <h3>Typical Applications</h3>
->>>>>>> fec1ea5 (fix: java docs)
+
  * <ul>
  *     <li>Route planning</li>
  *     <li>Chinese Postman Problem</li>
@@ -54,11 +54,11 @@ public final class Euler extends GraphAPI {
      * <p>If an Euler path exists, the returned traversal visits every
      * edge exactly once.</p>
      *
-<<<<<<< HEAD
+
      * <h2>Complexity</h2>
-=======
+
      * <h3>Complexity</h3>
->>>>>>> fec1ea5 (fix: java docs)
+
      *
      * <ul>
      *     <li>Time: O(V + E)</li>
@@ -87,11 +87,11 @@ public final class Euler extends GraphAPI {
      * <p>An Euler circuit is an Euler path that starts and ends at the
      * same vertex.</p>
      *
-<<<<<<< HEAD
+
      * <h2>Complexity</h2>
-=======
+
      * <h3>Complexity</h3>
->>>>>>> fec1ea5 (fix: java docs)
+
      *
      * <ul>
      *     <li>Time: O(V + E)</li>

@@ -21,21 +21,21 @@ import io.graphite.result.TopologicalSortResult;
  *         graph.topology().topologicalSort();
  * }</pre>
  *
-<<<<<<< HEAD
+
  * <h2>Available Algorithms</h2>
-=======
+
  * <h3>Available Algorithms</h3>
->>>>>>> fec1ea5 (fix: java docs)
+
  * <ul>
  *     <li>DFS Topological Sort</li>
  *     <li>Kahn's Algorithm</li>
  * </ul>
  *
-<<<<<<< HEAD
+
  * <h2>Typical Applications</h2>
-=======
+
  * <h3>Typical Applications</h3>
->>>>>>> fec1ea5 (fix: java docs)
+
  * <ul>
  *     <li>Task scheduling</li>
  *     <li>Dependency resolution</li>
@@ -64,11 +64,11 @@ public final class Topology extends GraphAPI {
      *
      * <p>This algorithm is applicable only to directed acyclic graphs.</p>
      *
-<<<<<<< HEAD
+
      * <h2>Complexity</h2>
-=======
+
      * <h3>Complexity</h3>
->>>>>>> fec1ea5 (fix: java docs)
+
      *
      * <ul>
      *     <li>Time: O(V + E)</li>
@@ -92,11 +92,11 @@ public final class Topology extends GraphAPI {
      * <p>Kahn's algorithm repeatedly removes vertices with zero
      * incoming edges until all vertices have been processed.</p>
      *
-<<<<<<< HEAD
+
      * <h2>Complexity</h2>
-=======
+
      * <h3>Complexity</h3>
->>>>>>> fec1ea5 (fix: java docs)
+
      *
      * <ul>
      *     <li>Time: O(V + E)</li>

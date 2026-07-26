@@ -24,11 +24,10 @@ import java.util.List;
  * <p>Instances are typically created through the builder API using
  * {@code immutable()} or by calling {@link IGraph#asImmutable()}.</p>
  *
-<<<<<<< HEAD
+
  * <h2>Characteristics</h2>
-=======
+
  * <h3>Characteristics</h3>
->>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Read-only graph structure.</li>
@@ -106,14 +105,31 @@ public final class ImmutableGraph implements IGraph {
     }
 
     @Override
-<<<<<<< HEAD
-=======
-    public boolean isActiveVertex(int vertex) {
-        return delegate.isActiveVertex(vertex);
+    public boolean isUsedVertex(int vertex) {
+        return delegate.isUsedVertex(vertex);
     }
 
     @Override
->>>>>>> fec1ea5 (fix: java docs)
+    public Iterable<Integer> activeVertices() {
+        return delegate.activeVertices();
+    }
+
+    @Override
+    public int activeVertexCount() {
+        return delegate.activeVertexCount();
+    }
+
+    @Override
+    public int firstActiveVertex() {
+        return delegate.firstActiveVertex();
+    }
+
+    @Override
+    public int randomActiveVertex() {
+        return delegate.randomActiveVertex();
+    }
+
+    @Override
     public boolean isWeighted() {
         return delegate.isWeighted();
     }

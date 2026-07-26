@@ -18,43 +18,34 @@ import java.util.Queue;
  * <p>Kahn's algorithm repeatedly removes vertices with zero incoming edges,
  * producing a valid topological ordering of a directed acyclic graph.</p>
  *
-<<<<<<< HEAD
+
  * <h2>Requirements</h2>
-=======
+
  * <h3>Requirements</h3>
->>>>>>> fec1ea5 (fix: java docs)
+
  *
  * <ul>
  *     <li>The graph must be directed.</li>
  *     <li>The graph must be acyclic.</li>
  * </ul>
  *
-<<<<<<< HEAD
  * <h2>Algorithm Overview</h2>
-=======
  * <h3>Algorithm Overview</h3>
->>>>>>> fec1ea5 (fix: java docs)
  *
  * <p>The algorithm maintains the in-degree of every vertex and processes
  * vertices whose in-degree becomes zero until all vertices have been
  * ordered.</p>
  *
-<<<<<<< HEAD
  * <h2>Complexity</h2>
-=======
  * <h3>Complexity</h3>
->>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Time: O(V + E)</li>
  *     <li>Space: O(V)</li>
  * </ul>
  *
-<<<<<<< HEAD
  * <h2>Applications</h2>
-=======
  * <h3>Applications</h3>
->>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Dependency management</li>
@@ -84,16 +75,16 @@ public class KahnTopologicalSort extends GraphAlgorithm implements TopologicalAl
 
         int[] indegree = ints(graph, 0);
 //        Step 1:Calculate indegree of every vertex
-        for (int u = 0; u < vertices; u++) {
-            indegree[u] = 0;
+        for (int u : graph.activeVertices()) {
             for (Edge edge : graph.getNeighbors(u)) {
                 indegree[edge.destination()]++;
             }
         }
+
 //        Step 2: Add all vertices with indegree 0
         Queue<Integer> queue = new LinkedList<>();
 
-        for (int i = 0; i < vertices; i++) {
+        for (int i : graph.activeVertices()) {
             if (indegree[i] == 0) {
                 queue.add(i);
             }
@@ -117,7 +108,7 @@ public class KahnTopologicalSort extends GraphAlgorithm implements TopologicalAl
         }
 
 //         Step 4: Cycle detection
-        if (order.size() != vertices) {
+        if (order.size() != graph.activeVertexCount()) {
             throw new GraphCycleException();
         }
 

@@ -16,11 +16,11 @@ import io.graphite.graph.IGraph;
  * boolean cycle = graph.cycle().hasCycle();
  * }</pre>
  *
-<<<<<<< HEAD
+
  * <h2>Typical Applications</h2>
-=======
+
  * <h3>Typical Applications</h3>
->>>>>>> fec1ea5 (fix: java docs)
+
  * <ul>
  *     <li>Dependency validation</li>
  *     <li>Deadlock detection</li>

@@ -1,13 +1,13 @@
 package io.graphite.builder;
 
-import io.graphite.benchmark.Benchmark;
+import io.graphite.benchmark.Benchmarks;
 import io.graphite.benchmark.BenchmarkConfig;
 import io.graphite.benchmark.BenchmarkTask;
 import io.graphite.graph.IGraph;
 
 public final class BenchmarkBuilder {
 
-    private String name = "Benchmark";
+    private String name = "Benchmarks";
 
     private BenchmarkTask task;
     private int warmup = 5;
@@ -46,7 +46,7 @@ public final class BenchmarkBuilder {
         return this;
     }
 
-    public Benchmark build() {
+    public Benchmarks build() {
 
         BenchmarkConfig config =
                 new BenchmarkConfig(
@@ -55,7 +55,7 @@ public final class BenchmarkBuilder {
                         measureMemory
                 );
 
-        return new Benchmark(
+        return new Benchmarks(
                 name,
                 task,
                 config

@@ -23,42 +23,42 @@ import java.util.List;
  * times and another on the transposed graph to discover strongly connected
  * components.</p>
  *
-<<<<<<< HEAD
+
  * <h2>Requirements</h2>
-=======
+
  * <h3>Requirements</h3>
->>>>>>> fec1ea5 (fix: java docs)
+
  *
  * <ul>
  *     <li>The graph must be directed.</li>
  * </ul>
  *
-<<<<<<< HEAD
+
  * <h2>Algorithm Overview</h2>
-=======
+
  * <h3>Algorithm Overview</h3>
->>>>>>> fec1ea5 (fix: java docs)
+
  *
  * <p>The algorithm performs a DFS to compute finishing order, reverses all
  * graph edges, and performs a second DFS in decreasing finish-time order to
  * identify each strongly connected component.</p>
  *
-<<<<<<< HEAD
+
  * <h2>Complexity</h2>
-=======
+
  * <h3>Complexity</h3>
->>>>>>> fec1ea5 (fix: java docs)
+
  *
  * <ul>
  *     <li>Time: O(V + E)</li>
  *     <li>Space: O(V)</li>
  * </ul>
  *
-<<<<<<< HEAD
+
  * <h2>When to Use</h2>
-=======
+
  * <h3>When to Use</h3>
->>>>>>> fec1ea5 (fix: java docs)
+
  *
  * <ul>
  *     <li>Finding strongly connected components.</li>
@@ -87,9 +87,10 @@ public class Kosaraju extends GraphAlgorithm implements SCCAlgorithm {
         boolean[] visited = booleans(graph);
         Deque<Integer> stack = new ArrayDeque<>();
 
-        for (int i = 0; i < graph.getVertices(); i++) {
-            if (!visited[i]) {
-                fillOrder(graph, i, visited, stack);
+        for (int vertex : graph.activeVertices()) {
+
+            if (!visited[vertex]) {
+                fillOrder(graph, vertex, visited, stack);
             }
         }
 

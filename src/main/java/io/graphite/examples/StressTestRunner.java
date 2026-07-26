@@ -7,7 +7,7 @@ public class StressTestRunner {
     private StressTestRunner() {
     }
 
-    static void main(String[] args) {
+    public static void main(String[] args) {
         TraversalStress.run();
         CycleStress.run(); // both dir & un-dir
         MSTStress.run();

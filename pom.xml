@@ -1,33 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="
-         http://maven.apache.org/POM/4.0.0
-         https://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
-    <scm>
-        <url>https://github.com/chinmay-gope/graphite-v2</url>
-        <connection>scm:git:https://github.com/chinmay-gope/graphite-v2.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com:chinmay-gope/graphite-v2.git</developerConnection>
-        <tag>HEAD</tag>
-    </scm>
-
-    <organization>
-        <name>Graphite</name>
-        <url>https://github.com/chinmay-gope/graphite-v2</url>
-    </organization>
-
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.release>21</maven.compiler.release>
-    </properties>
-
     <groupId>io.graphite</groupId>
-
     <artifactId>graphite</artifactId>
-
     <version>2.1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
     <name>Graphite</name>
 
@@ -37,7 +18,12 @@
         graph I/O, benchmarking, and immutable graph support.
     </description>
 
-    <url>https://github.com/chinmay-gope/graphite-v2</url>
+    <url>https://github.com/chinmay-gope/graphite</url>
+
+    <organization>
+        <name>Graphite</name>
+        <url>https://github.com/chinmay-gope/graphite</url>
+    </organization>
 
     <licenses>
         <license>
@@ -47,11 +33,6 @@
         </license>
     </licenses>
 
-    <issueManagement>
-        <system>GitHub Issues</system>
-        <url>https://github.com/chinmay-gope/graphite-v2/issues</url>
-    </issueManagement>
-
     <developers>
         <developer>
             <id>chinmay-gope</id>
@@ -59,6 +40,33 @@
             <email>chinmaygope69@gmail.com</email>
         </developer>
     </developers>
+
+    <scm>
+        <url>https://github.com/chinmay-gope/graphite</url>
+        <connection>scm:git:https://github.com/chinmay-gope/graphite.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:chinmay-gope/graphite.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <issueManagement>
+        <system>GitHub Issues</system>
+        <url>https://github.com/chinmay-gope/graphite/issues</url>
+    </issueManagement>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.release>21</maven.compiler.release>
+        <junit.jupiter.version>5.13.4</junit.jupiter.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${junit.jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>
@@ -70,38 +78,35 @@
                     <release>${maven.compiler.release}</release>
                 </configuration>
             </plugin>
-<<<<<<< HEAD
-        </plugins>
-    </build>
 
-=======
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.5.6</version>
+                <version>3.2.5</version>
+                <configuration>
+                    <useModulePath>false</useModulePath>
+                </configuration>
             </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>3.12.0</version>
                 <configuration>
-                    <!-- Disables doclint checks for bad HTML tag hierarchy -->
                     <doclint>all,-html,-accessibility</doclint>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>5.13.4</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
-
->>>>>>> fec1ea5 (fix: java docs)
-    <packaging>jar</packaging>
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <skipTests>true</skipTests>
+            </properties>
+        </profile>
+    </profiles>
 
 </project>

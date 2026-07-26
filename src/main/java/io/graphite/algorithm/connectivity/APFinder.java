@@ -16,41 +16,31 @@ import java.util.List;
  * <p>An articulation point is a vertex whose removal disconnects the graph
  * or increases the number of connected components.</p>
  *
-<<<<<<< HEAD
+
  * <h2>Requirements</h2>
-=======
+
  * <h3>Requirements</h3>
->>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>The graph must be undirected.</li>
  * </ul>
  *
-<<<<<<< HEAD
  * <h2>Algorithm Overview</h2>
-=======
  * <h3>Algorithm Overview</h3>
->>>>>>> fec1ea5 (fix: java docs)
  *
  * <p>This implementation applies Tarjan's low-link algorithm during
  * depth-first traversal to determine critical vertices.</p>
  *
-<<<<<<< HEAD
  * <h2>Complexity</h2>
-=======
  * <h3>Complexity</h3>
->>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Time: O(V + E)</li>
  *     <li>Space: O(V)</li>
  * </ul>
  *
-<<<<<<< HEAD
  * <h2>Applications</h2>
-=======
  * <h3>Applications</h3>
->>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Fault tolerance analysis.</li>
@@ -74,6 +64,7 @@ public class APFinder extends GraphAlgorithm implements APAlgorithm {
 
     @Override
     public APResult findArticulationPoints(IGraph graph) {
+        time = 0;
         GraphPreconditions.requireGraph(graph);
         GraphPreconditions.requireUndirected(graph);
 
@@ -84,11 +75,11 @@ public class APFinder extends GraphAlgorithm implements APAlgorithm {
 
         boolean[] articulation = booleans(graph);
 
-        for (int i = 0; i < graph.getVertices(); i++) {
-            if (!visited[i]) {
+        for (int vertex : graph.activeVertices()) {
+            if (!visited[vertex]) {
                 dfs(
                         graph,
-                        i,
+                        vertex,
                         -1,
                         visited,
                         discovery,

@@ -1,9 +1,9 @@
 package io.graphite.builder;
 
-<<<<<<< HEAD
+
 import io.graphite.generator.RandomGraphBuilder;
-=======
->>>>>>> fec1ea5 (fix: java docs)
+
+
 import io.graphite.graph.DirectedGraph;
 import io.graphite.graph.GraphFactory;
 
@@ -23,11 +23,11 @@ import io.graphite.graph.GraphFactory;
  *         .build();
  * }</pre>
  *
-<<<<<<< HEAD
+
  * <h2>Features</h2>
-=======
+
  * <h3>Features</h3>
->>>>>>> fec1ea5 (fix: java docs)
+
  *
  * <ul>
  *     <li>Fluent builder API</li>
@@ -36,11 +36,11 @@ import io.graphite.graph.GraphFactory;
  *     <li>Mutable or immutable graphs</li>
  * </ul>
  *
-<<<<<<< HEAD
+
  * <h2>Implementation Notes</h2>
-=======
+
  * <h3>Implementation Notes</h3>
->>>>>>> fec1ea5 (fix: java docs)
+
  *
  * <p>Builder instances are mutable and are intended for single-use during
  * graph construction.</p>

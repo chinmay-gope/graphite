@@ -1,5 +1,6 @@
 package io.graphite.benchmark;
 
+import io.graphite.exception.GraphException;
 import io.graphite.result.BenchmarkResult;
 
 /**
@@ -9,11 +10,11 @@ import io.graphite.result.BenchmarkResult;
  * of a benchmark before producing a {@link BenchmarkResult} containing
  * timing statistics.</p>
  *
-<<<<<<< HEAD
+
  * <h2>Responsibilities</h2>
-=======
+
  * <h3>Responsibilities</h3>
->>>>>>> fec1ea5 (fix: java docs)
+
  *
  * <ul>
  *     <li>Warm-up execution</li>
@@ -24,7 +25,7 @@ import io.graphite.result.BenchmarkResult;
  *
  * @author Chinmay
  * @version 2.0
- * @see Benchmark
+ * @see Benchmarks
  * @see BenchmarkStatistics
  * @since 2.0
  */
@@ -48,25 +49,36 @@ public final class BenchmarkRunner {
         }
 
         // ---------------------------------------------------------
-        // Benchmark
+        // Benchmarks
         // ---------------------------------------------------------
 
         double[] times = new double[config.iterations()];
+
         long totalNanos = 0;
 
-        for (int i = 0; i < config.iterations(); i++) {
+        int completed = 0;
 
-            long start = System.nanoTime();
+        int skipped = 0;
+        while (completed < config.iterations()) {
 
-            task.execute();
+            try {
 
-            long end = System.nanoTime();
+                long start = System.nanoTime();
 
-            long elapsed = end - start;
+                task.execute();
 
-            totalNanos += elapsed;
+                long end = System.nanoTime();
 
-            times[i] = (end - start) / 1_000_000.0;
+                long elapsed = end - start;
+
+                totalNanos += elapsed;
+
+                times[completed++] = elapsed / 1_000_000.0;
+
+            } catch (GraphException ignored) {
+
+                skipped++;
+            }
         }
 
         // ---------------------------------------------------------
@@ -86,6 +98,7 @@ public final class BenchmarkRunner {
 
                 config.warmup(),
                 config.iterations(),
+                skipped,
 
                 totalNanos,
 

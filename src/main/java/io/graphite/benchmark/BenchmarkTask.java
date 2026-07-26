@@ -13,7 +13,7 @@ import io.graphite.builder.BenchmarkBuilder;
  *
  * @author Chinmay
  * @version 2.0
- * @see Benchmark
+ * @see Benchmarks
  * @see BenchmarkBuilder
  * @since 2.0
  */

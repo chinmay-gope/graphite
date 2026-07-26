@@ -1,5 +1,6 @@
 package io.graphite.benchmark.algorithm;
 
+import io.graphite.benchmark.AbstractBenchmark;
 import io.graphite.generator.preset.GraphPresetGenerator;
 import io.graphite.graph.IGraph;
 

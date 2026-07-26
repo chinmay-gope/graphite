@@ -2,6 +2,7 @@ package io.graphite.algorithm.euler;
 
 import io.graphite.algorithm.GraphAlgorithm;
 import io.graphite.api.Euler;
+import io.graphite.exception.GraphEmptyException;
 import io.graphite.exception.algorithm.GraphCycleException;
 import io.graphite.exception.graph.GraphDisconnectedException;
 import io.graphite.graph.IGraph;
@@ -20,43 +21,32 @@ import java.util.*;
  * following unused edges and merging cycles until every edge has been
  * visited exactly once.</p>
  *
-<<<<<<< HEAD
+
  * <h2>Requirements</h2>
-=======
  * <h3>Requirements</h3>
->>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>The graph must satisfy the conditions for an Euler path or
  *     Euler circuit.</li>
  * </ul>
  *
-<<<<<<< HEAD
  * <h2>Algorithm Overview</h2>
-=======
  * <h3>Algorithm Overview</h3>
->>>>>>> fec1ea5 (fix: java docs)
  *
  * <p>The algorithm incrementally builds the Eulerian traversal using a
  * stack, removing edges as they are traversed and backtracking whenever no
  * unused edges remain.</p>
  *
-<<<<<<< HEAD
  * <h2>Complexity</h2>
-=======
  * <h3>Complexity</h3>
->>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Time: O(V + E)</li>
  *     <li>Space: O(V + E)</li>
  * </ul>
  *
-<<<<<<< HEAD
  * <h2>Applications</h2>
-=======
  * <h3>Applications</h3>
->>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Route inspection</li>
@@ -121,7 +111,7 @@ public class Hierholzer extends GraphAlgorithm implements EulerAlgorithm {
     private int countOddVertices(IGraph graph) {
         int odd = 0;
 
-        for (int i = 0; i < graph.getVertices(); i++) {
+        for (int i : graph.activeVertices()) {
 
             if (graph.degree(i) % 2 != 0) {
                 odd++;
@@ -132,20 +122,20 @@ public class Hierholzer extends GraphAlgorithm implements EulerAlgorithm {
     }
 
     private int findStartVertex(IGraph graph) {
-        for (int i = 0; i < graph.getVertices(); i++) {
+        for (int i : graph.activeVertices()) {
             if (graph.degree(i) % 2 != 0) {
                 return i;
             }
 
         }
 
-        for (int i = 0; i < graph.getVertices(); i++) {
+        for (int i : graph.activeVertices()) {
             if (graph.degree(i) > 0) {
                 return i;
             }
         }
 
-        return 0;
+        throw new GraphEmptyException("Graph contains no active vertices.");
     }
 
     private List<Integer> hierholzer(IGraph graph, int start) {

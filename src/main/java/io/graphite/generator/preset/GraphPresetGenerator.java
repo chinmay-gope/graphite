@@ -1,11 +1,7 @@
 package io.graphite.generator.preset;
 
 import io.graphite.builder.Graphs;
-<<<<<<< HEAD
 import io.graphite.generator.RandomGraphBuilder;
-=======
-import io.graphite.builder.RandomGraphBuilder;
->>>>>>> fec1ea5 (fix: java docs)
 import io.graphite.generator.pattern.BipartiteGraphGenerator;
 import io.graphite.graph.IGraph;
 import io.graphite.graph.PatternGraphBuilder;
@@ -20,11 +16,8 @@ import io.graphite.graph.PatternGraphBuilder;
  * graphs. These presets provide consistent graph structures suitable for
  * examples, benchmarks, and automated testing.</p>
  *
-<<<<<<< HEAD
  * <h2>Available Presets</h2>
-=======
  * <h3>Available Presets</h3>
->>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Traversal graphs</li>
@@ -38,11 +31,8 @@ import io.graphite.graph.PatternGraphBuilder;
  *     <li>Bipartite graphs</li>
  * </ul>
  *
-<<<<<<< HEAD
  * <h2>Implementation Notes</h2>
-=======
  * <h3>Implementation Notes</h3>
->>>>>>> fec1ea5 (fix: java docs)
  *
  * <p>Each preset delegates graph construction to the appropriate builder
  * or pattern generator while applying sensible default parameters.</p>

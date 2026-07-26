@@ -4,6 +4,7 @@ import io.graphite.algorithm.connectivity.APFinder;
 import io.graphite.algorithm.connectivity.BiconnectedComponents;
 import io.graphite.algorithm.connectivity.BridgeFinder;
 import io.graphite.algorithm.connectivity.Kosaraju;
+import io.graphite.benchmark.AbstractBenchmark;
 import io.graphite.generator.preset.GraphPresetGenerator;
 import io.graphite.graph.IGraph;
 

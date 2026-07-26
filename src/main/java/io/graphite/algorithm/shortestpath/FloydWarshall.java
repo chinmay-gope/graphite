@@ -18,11 +18,11 @@ import java.util.Arrays;
  * vertices in a weighted graph. Unlike single-source algorithms, it produces
  * a complete distance matrix in a single execution.</p>
  *
-<<<<<<< HEAD
+
  * <h2>Requirements</h2>
-=======
+
  * <h3>Requirements</h3>
->>>>>>> fec1ea5 (fix: java docs)
+
  *
  * <ul>
  *     <li>Supports directed and undirected graphs.</li>
@@ -30,32 +30,32 @@ import java.util.Arrays;
  *     <li>Negative-weight cycles must not exist.</li>
  * </ul>
  *
-<<<<<<< HEAD
+
  * <h2>Algorithm Overview</h2>
-=======
+
  * <h3>Algorithm Overview</h3>
->>>>>>> fec1ea5 (fix: java docs)
+
  *
  * <p>The algorithm applies dynamic programming by progressively considering
  * each vertex as an intermediate point between every pair of vertices,
  * updating the shortest known distances whenever a shorter path is found.</p>
  *
-<<<<<<< HEAD
+
  * <h2>Complexity</h2>
-=======
+
  * <h3>Complexity</h3>
->>>>>>> fec1ea5 (fix: java docs)
+
  *
  * <ul>
  *     <li>Time: O(V³)</li>
  *     <li>Space: O(V²)</li>
  * </ul>
  *
-<<<<<<< HEAD
+
  * <h2>Applications</h2>
-=======
+
  * <h3>Applications</h3>
->>>>>>> fec1ea5 (fix: java docs)
+
  *
  * <ul>
  *     <li>Complete network analysis</li>
@@ -64,21 +64,21 @@ import java.util.Arrays;
  *     <li>Graph analytics</li>
  * </ul>
  *
-<<<<<<< HEAD
+
  * <h2>When to Use</h2>
-=======
+
  * <h3>When to Use</h3>
->>>>>>> fec1ea5 (fix: java docs)
+
  * <ul>
  *     <li>When shortest paths are needed between every pair of vertices.</li>
  *     <li>For small or dense graphs where an all-pairs solution is preferable.</li>
  * </ul>
  *
-<<<<<<< HEAD
+
  * <h2>Implementation Notes</h2>
-=======
+
  * <h3>Implementation Notes</h3>
->>>>>>> fec1ea5 (fix: java docs)
+
  *
  * <p>This algorithm is best suited for small to medium-sized dense graphs
  * where the shortest paths between every pair of vertices are required.</p>

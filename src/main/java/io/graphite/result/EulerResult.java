@@ -12,11 +12,11 @@ import java.util.List;
  * <p>An {@code EulerResult} stores the Eulerian traversal produced by the
  * algorithm together with information describing its validity.</p>
  *
-<<<<<<< HEAD
+
  * <h2>Contents</h2>
-=======
+
  * <br>Contents</br>
->>>>>>> fec1ea5 (fix: java docs)
+
  *
  * <ul>
  *     <li>Euler path or circuit</li>

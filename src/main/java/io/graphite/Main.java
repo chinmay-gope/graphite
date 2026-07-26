@@ -1,27 +1,71 @@
 package io.graphite;
 
-import io.graphite.builder.Graphs;
-import io.graphite.graph.IGraph;
-import io.graphite.print.GraphPrinter;
+import io.graphite.examples.BenchmarkComparisonExample;
+import io.graphite.examples.BenchmarkTestRunner;
+import io.graphite.examples.MainExamples;
+import io.graphite.examples.StressTestRunner;
+import io.graphite.examples.format.FormatterExamples;
 
-public class Main {
-    static void main() {
-        IGraph graph = Graphs
-                .random()
-                .vertices(3)
-                .edges(3)
-                .immutable()
-                .build();
+import java.io.IOException;
 
-//        graph.addEdge(0,4);
-        System.out.println("Graph as mutable: " + graph.asImmutable().getClass()); // throws : This graph is immutable.
+public final class Main {
 
-        GraphPrinter.compact(graph); // print() also uses same formatter
-        GraphPrinter.edgeList(graph);
-        GraphPrinter.matrix(graph);
-        GraphPrinter.statistics(graph);
-        GraphPrinter.dot(graph);
-        GraphPrinter.mermaid(graph);
-        GraphPrinter.json(graph);
+    private Main() {
+    }
+
+    public static void main(String[] args) throws IOException {
+
+        if (args.length == 0) {
+            usage();
+            return;
+        }
+
+        switch (args[0].toLowerCase()) {
+
+            case "examples" -> MainExamples
+                    .main(new String[0]);
+
+            case "stress" -> StressTestRunner
+                    .main(new String[0]);
+
+            case "format" -> FormatterExamples.run();
+
+            case "benchmark" -> {
+
+                if (args.length > 1 &&
+                        args[1].equalsIgnoreCase(" -c")) {
+
+                    BenchmarkComparisonExample.main(new String[0]);
+
+                } else {
+
+                    BenchmarkTestRunner.main(new String[0]);
+                }
+            }
+
+            case "help" -> usage();
+
+            default -> {
+
+                System.out.println(
+                        "Unknown command: " + args[0]);
+
+                usage();
+            }
+        }
+    }
+
+    private static void usage() {
+
+        System.out.println("""
+                Graphite CLI
+                
+                Usage:
+                  graphite examples
+                  graphite stress
+                  graphite benchmark
+                  graphite benchmark -c
+                  graphite help
+                """);
     }
 }

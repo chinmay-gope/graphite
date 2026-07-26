@@ -16,11 +16,11 @@ import io.graphite.generator.preset.GraphPresetGenerator;
  *         .completeGraph(20);
  * }</pre>
  *
-<<<<<<< HEAD
+
  * <h2>Available Patterns</h2>
-=======
+
  * <h3>Available Patterns</h3>
->>>>>>> fec1ea5 (fix: java docs)
+
  *
  * <ul>
  *     <li>Complete Graph</li>

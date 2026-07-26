@@ -22,21 +22,21 @@ import io.graphite.result.MSTResult;
  * MSTResult result = graph.mst().kruskal();
  * }</pre>
  *
-<<<<<<< HEAD
+
  * <h2>Available Algorithms</h2>
-=======
+
  * <h3>Available Algorithms</h3>
->>>>>>> fec1ea5 (fix: java docs)
+
  * <ul>
  *     <li>Prim's Algorithm</li>
  *     <li>Kruskal's Algorithm</li>
  * </ul>
  *
-<<<<<<< HEAD
+
  * <h2>Typical Applications</h2>
-=======
+
  * <h3>Typical Applications</h3>
->>>>>>> fec1ea5 (fix: java docs)
+
  * <ul>
  *     <li>Network design</li>
  *     <li>Road and utility planning</li>
@@ -69,11 +69,11 @@ public final class MST extends GraphAPI {
      *
      * <p>This algorithm requires a connected, weighted, undirected graph.</p>
      *
-<<<<<<< HEAD
+
      * <h2>Complexity</h2>
-=======
+
      * <h3>Complexity</h3>
->>>>>>> fec1ea5 (fix: java docs)
+
      *
      * <ul>
      *     <li>Time: O((V + E) log V)</li>
@@ -100,11 +100,11 @@ public final class MST extends GraphAPI {
      *
      * <p>This algorithm requires a connected, weighted, undirected graph.</p>
      *
-<<<<<<< HEAD
+
      * <h2>Complexity</h2>
-=======
+
      * <h3>Complexity</h3>
->>>>>>> fec1ea5 (fix: java docs)
+
      *
      * <ul>
      *     <li>Time: O(E log E)</li>

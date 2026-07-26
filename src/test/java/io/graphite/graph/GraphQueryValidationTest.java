@@ -1,7 +1,7 @@
 package io.graphite.graph;
 
 import io.graphite.builder.Graphs;
-import io.graphite.exception.graph.InvalidVertexException;
+import io.graphite.exception.GraphEmptyException;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -16,7 +16,7 @@ class GraphQueryValidationTest {
                 .build();
 
         assertThrows(
-                InvalidVertexException.class,
+                GraphEmptyException.class,
                 () -> graph.degree(0)
         );
     }
@@ -29,7 +29,7 @@ class GraphQueryValidationTest {
                 .build();
 
         assertThrows(
-                InvalidVertexException.class,
+                GraphEmptyException.class,
                 () -> graph.neighbors(0)
         );
     }
@@ -42,7 +42,7 @@ class GraphQueryValidationTest {
                 .build();
 
         assertThrows(
-                InvalidVertexException.class,
+                GraphEmptyException.class,
                 () -> graph.hasEdge(0, 4)
         );
     }
@@ -55,7 +55,7 @@ class GraphQueryValidationTest {
                 .build();
 
         assertThrows(
-                InvalidVertexException.class,
+                GraphEmptyException.class,
                 () -> graph.hasEdge(2, 0)
         );
     }

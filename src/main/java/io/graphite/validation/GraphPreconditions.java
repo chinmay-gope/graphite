@@ -15,11 +15,11 @@ import io.graphite.graph.IGraph;
  * satisfy the structural constraints expected by individual algorithms,
  * resulting in consistent error reporting throughout the library.</p>
  *
-<<<<<<< HEAD
+
  * <h2>Supported Validations</h2>
-=======
+
  * <h3>Supported Validations</h3>
->>>>>>> fec1ea5 (fix: java docs)
+
  *
  * <ul>
  *     <li>Null graph validation</li>
@@ -30,11 +30,11 @@ import io.graphite.graph.IGraph;
  *     <li>Vertex index validation</li>
  * </ul>
  *
-<<<<<<< HEAD
+
  * <h2>Implementation Notes</h2>
-=======
+
  * <h3>Implementation Notes</h3>
->>>>>>> fec1ea5 (fix: java docs)
+
  *
  * <p>This class contains only static utility methods and cannot be
  * instantiated.</p>
@@ -68,14 +68,14 @@ public final class GraphPreconditions {
         }
     }
 
-<<<<<<< HEAD
-=======
+
+
     public static void requireActiveVertex(
             IGraph graph,
             int vertex
     ) {
 
-        if (!graph.isActiveVertex(vertex)) {
+        if (!graph.isUsedVertex(vertex)) {
             throw new InvalidVertexException(vertex);
         }
 
@@ -90,7 +90,7 @@ public final class GraphPreconditions {
         }
     }
 
->>>>>>> fec1ea5 (fix: java docs)
+
     public static void requireDirected(
             IGraph graph) {
 

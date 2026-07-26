@@ -36,11 +36,11 @@ import java.util.List;
  * graph.mst().prim();
  * }</pre>
  *
-<<<<<<< HEAD
+
  * <h2>Characteristics</h2>
-=======
+
  * <h3>Characteristics</h3>
->>>>>>> fec1ea5 (fix: java docs)
+
  *
  * <ul>
  *     <li>Supports directed and undirected graphs.</li>
@@ -50,11 +50,10 @@ import java.util.List;
  *     <li>Supports graph formatting, transformation, validation, and analysis.</li>
  * </ul>
  *
-<<<<<<< HEAD
+
  * <h2>Implementation Notes</h2>
-=======
+
  * <h3>Implementation Notes</h3>
->>>>>>> fec1ea5 (fix: java docs)
  *
  * <p>Implementations are expected to maintain a valid graph state and perform
  * necessary validation before structural modifications or algorithm execution.
@@ -100,16 +99,15 @@ public interface IGraph {
 
     boolean hasEdge(int source, int destination);
 
-<<<<<<< HEAD
-=======
+
     /**
-     * <p>Checks if the vertex is present in the graph</p>
+     * Returns whether the given vertex index is valid.
      *
-     * @param vertex node
-     * @return {@code true} if the vertex present in the graph,
-     * {@code false} otherwise
+     * <p>This does not imply that the vertex participates in the graph.
+     * Use {@link #isUsedVertex(int)} to determine whether the vertex
+     * currently exists in the graph.</p>
      */
->>>>>>> fec1ea5 (fix: java docs)
+
     boolean containsVertex(int vertex);
 
     int degree(int vertex);
@@ -117,21 +115,18 @@ public interface IGraph {
     boolean isEmpty();
 
     /**
-<<<<<<< HEAD
-=======
      * Returns whether the given vertex is present in this graph.
      *
-     * <p>A vertex is considered active if it was explicitly added
+     * <p>A vertex is considered used if it was explicitly added
      * or appears as the source or destination of at least one edge.</p>
      *
      * @param vertex vertex index
      * @return {@code true} if the vertex exists in the graph,
      * {@code false} otherwise
      */
-    boolean isActiveVertex(int vertex);
+    boolean isUsedVertex(int vertex);
 
     /**
->>>>>>> fec1ea5 (fix: java docs)
      * Returns whether this graph contains weighted edges.
      *
      * @return {@code true} if edge weights are significant;
@@ -155,8 +150,6 @@ public interface IGraph {
      */
     boolean isUndirected();
 
-
-    // ========= Views =========
 
     /**
      * Returns the neighboring vertices adjacent to the specified vertex.
@@ -188,8 +181,6 @@ public interface IGraph {
         return getEdges();
     }
 
-    // ========= Metadata =========
-
     /**
      * Returns the total number of vertices contained in this graph.
      *
@@ -220,6 +211,14 @@ public interface IGraph {
     default boolean contains(int vertex) {
         return containsVertex(vertex);
     }
+
+    Iterable<Integer> activeVertices();
+
+    int activeVertexCount();
+
+    int firstActiveVertex();
+
+    int randomActiveVertex();
 
     // ========= Copy =========
 

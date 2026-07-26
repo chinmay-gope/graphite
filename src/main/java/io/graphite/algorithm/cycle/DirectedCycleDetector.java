@@ -16,43 +16,33 @@ import io.graphite.validation.GraphPreconditions;
  * a recursion stack. A cycle is detected whenever a back edge points to a
  * vertex that is currently on the recursion stack.</p>
  *
-<<<<<<< HEAD
+
  * <h2>Requirements</h2>
-=======
+
  * <h3>Requirements</h3>
->>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>The graph must be directed.</li>
  * </ul>
  *
-<<<<<<< HEAD
  * <h2>Algorithm Overview</h2>
-=======
  * <h3>Algorithm Overview</h3>
->>>>>>> fec1ea5 (fix: java docs)
  *
  * <p>The algorithm traverses each unvisited vertex using DFS. During
  * traversal, vertices currently being explored are tracked in a recursion
  * stack. Encountering a vertex already on the stack indicates a directed
  * cycle.</p>
  *
-<<<<<<< HEAD
  * <h2>Complexity</h2>
-=======
  * <h3>Complexity</h3>
->>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Time: O(V + E)</li>
  *     <li>Space: O(V)</li>
  * </ul>
  *
-<<<<<<< HEAD
  * <h2>Applications</h2>
-=======
  * <h3>Applications</h3>
->>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Dependency validation</li>
@@ -81,11 +71,8 @@ public class DirectedCycleDetector extends GraphAlgorithm implements CycleDetect
      * <p>The appropriate cycle detection algorithm is selected
      * automatically based on the graph type.</p>
      *
-<<<<<<< HEAD
      * <h2>Complexity</h2>
-=======
      * <h3>Complexity</h3>
->>>>>>> fec1ea5 (fix: java docs)
      *
      * <ul>
      *     <li>Time: O(V + E)</li>
@@ -105,13 +92,20 @@ public class DirectedCycleDetector extends GraphAlgorithm implements CycleDetect
         boolean[] visited = booleans(graph);
         boolean[] recursionStack = booleans(graph);
 
-        for (int i = 0; i < graph.getVertices(); i++) {
-            if (!visited[i]) {
-                if (hasCycle(graph, i, visited, recursionStack)) {
+        for (int vertex : graph.activeVertices()) {
+
+            if (!visited[vertex]) {
+                if (hasCycle(
+                        graph,
+                        vertex,
+                        visited,
+                        recursionStack)) {
+
                     return true;
                 }
             }
         }
+
         return false;
     }
 

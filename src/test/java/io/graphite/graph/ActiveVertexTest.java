@@ -17,11 +17,11 @@ class ActiveVertexTest {
                 .addEdge(2, 4)
                 .build();
 
-        assertFalse(graph.isActiveVertex(0));
-        assertFalse(graph.isActiveVertex(1));
-        assertTrue(graph.isActiveVertex(2));
-        assertFalse(graph.isActiveVertex(3));
-        assertTrue(graph.isActiveVertex(4));
+        assertFalse(graph.isUsedVertex(0));
+        assertFalse(graph.isUsedVertex(1));
+        assertTrue(graph.isUsedVertex(2));
+        assertFalse(graph.isUsedVertex(3));
+        assertTrue(graph.isUsedVertex(4));
     }
 
     @Test
@@ -59,7 +59,7 @@ class ActiveVertexTest {
 
         graph.clear();
 
-        assertFalse(graph.isActiveVertex(2));
-        assertFalse(graph.isActiveVertex(4));
+        assertFalse(graph.isUsedVertex(2));
+        assertFalse(graph.isUsedVertex(4));
     }
 }

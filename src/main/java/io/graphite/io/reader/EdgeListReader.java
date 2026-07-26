@@ -21,11 +21,11 @@ import java.util.List;
  * <p>The reader supports both directed and undirected graphs and performs
  * validation while constructing the resulting graph.</p>
  *
-<<<<<<< HEAD
+
  * <h2>Supported Features</h2>
-=======
+
  * <h3>Supported Features</h3>
->>>>>>> fec1ea5 (fix: java docs)
+
  *
  * <ul>
  *     <li>Directed and undirected graphs</li>
@@ -34,11 +34,11 @@ import java.util.List;
  *     <li>Input validation</li>
  * </ul>
  *
-<<<<<<< HEAD
+
  * <h2>Input Format</h2>
-=======
+
  * <h3>Input Format</h3>
->>>>>>> fec1ea5 (fix: java docs)
+
  *
  * <pre>
  * source destination

@@ -1,9 +1,8 @@
 package io.graphite.builder;
 
-<<<<<<< HEAD
-=======
+
 import io.graphite.exception.graph.InvalidGraphConfigurationException;
->>>>>>> fec1ea5 (fix: java docs)
+
 import io.graphite.graph.Graph;
 import io.graphite.graph.IGraph;
 import io.graphite.model.Edge;
@@ -32,11 +31,8 @@ import java.util.List;
  *       .build();
  * }</pre>
  *
-<<<<<<< HEAD
  * <h2>Responsibilities</h2>
-=======
  * <h3>Responsibilities</h3>
->>>>>>> fec1ea5 (fix: java docs)
  *
  * <ul>
  *     <li>Stores graph configuration.</li>
@@ -77,11 +73,9 @@ public abstract class AbstractGraphBuilder<G extends Graph, SELF extends Abstrac
         return edges.size();
     }
 
-<<<<<<< HEAD
-    public SELF vertices(int vertices) {
-        configuration.setVertices(vertices);
-=======
+
     /**
+     *
      * Sets the total number of vertices in the graph.
      *
      * <p>If specified, this value becomes a fixed upper bound and
@@ -93,8 +87,9 @@ public abstract class AbstractGraphBuilder<G extends Graph, SELF extends Abstrac
      */
     public SELF vertices(int vertices) {
         configuration.setVertices(vertices);
+        configuration.setVertices(vertices);
         configuration.setHasFixedVertexCount(true);
->>>>>>> fec1ea5 (fix: java docs)
+
         return self();
     }
 
@@ -134,18 +129,17 @@ public abstract class AbstractGraphBuilder<G extends Graph, SELF extends Abstrac
             int destination,
             int weight) {
 
-<<<<<<< HEAD
-=======
+
         updateVertexCount(source, destination);
 
->>>>>>> fec1ea5 (fix: java docs)
+
         edges.add(new Edge(
                 source,
                 destination,
                 weight
         ));
 
-<<<<<<< HEAD
+
         configuration.setVertices(
                 Math.max(
                         configuration.getVertices(),
@@ -153,14 +147,13 @@ public abstract class AbstractGraphBuilder<G extends Graph, SELF extends Abstrac
                 )
         );
 
-=======
->>>>>>> fec1ea5 (fix: java docs)
+
         return self();
     }
 
     public SELF addEdge(Edge edge) {
 
-<<<<<<< HEAD
+
         edges.add(edge);
 
         configuration.setVertices(
@@ -169,11 +162,11 @@ public abstract class AbstractGraphBuilder<G extends Graph, SELF extends Abstrac
                         Math.max(edge.source(), edge.destination()) + 1
                 )
         );
-=======
+
         updateVertexCount(edge.source(), edge.destination());
 
         edges.add(edge);
->>>>>>> fec1ea5 (fix: java docs)
+
 
         return self();
     }
@@ -225,8 +218,7 @@ public abstract class AbstractGraphBuilder<G extends Graph, SELF extends Abstrac
                 ? graph.asImmutable()
                 : graph;
     }
-<<<<<<< HEAD
-=======
+
 
     private void updateVertexCount(int source, int destination) {
 
@@ -253,5 +245,5 @@ public abstract class AbstractGraphBuilder<G extends Graph, SELF extends Abstrac
 
         }
     }
->>>>>>> fec1ea5 (fix: java docs)
+
 }

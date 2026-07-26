@@ -6,7 +6,7 @@ public final class BenchmarkTestRunner {
     private BenchmarkTestRunner() {
     }
 
-    static void main(String[] args) {
+    public static void main(String[] args) {
         TraversalBenchmark.run();
         CycleBenchmark.run();
         MSTBenchmark.run();
