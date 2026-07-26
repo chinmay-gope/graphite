@@ -1,73 +1,47 @@
 package io.graphite.testutil;
 
 import io.graphite.graph.IGraph;
-import io.graphite.result.MSTResult;
-import io.graphite.result.ShortestPathResult;
+import io.graphite.model.Edge;
 import io.graphite.result.TopologicalSortResult;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public final class AlgorithmVerifier {
 
     private AlgorithmVerifier() {
     }
 
-    public static void verifyShortestPaths(
+    public static void verifyTopologicalOrder(
             IGraph graph,
-            int source
-    ) {
+            TopologicalSortResult result) {
 
-        ShortestPathResult dijkstra =
-                graph.shortestPath().dijkstra(source);
-
-        ShortestPathResult bellman =
-                graph.shortestPath().bellmanFord(source);
-
-        assertArrayEquals(
-                bellman.distance(),
-                dijkstra.distance(),
-                "Dijkstra and Bellman-Ford disagree."
-        );
-    }
-
-    public static void verifyMST(
-            IGraph graph
-    ) {
-
-        MSTResult prim =
-                graph.mst().prim(0);
-
-        MSTResult kruskal =
-                graph.mst().kruskal();
+        List<Integer> order = result.order();
 
         assertEquals(
-                prim.cost(),
-                kruskal.cost(),
-                "Prim and Kruskal produced different MST costs."
-        );
+                graph.activeVertexCount(),
+                order.size(),
+                "Topological ordering missed vertices.");
 
-        assertEquals(
-                prim.edges().size(),
-                kruskal.edges().size(),
-                "Prim and Kruskal produced different edge counts."
-        );
-    }
+        Map<Integer, Integer> position = new HashMap<>();
 
-    public static void verifyTopology(
-            IGraph graph
-    ) {
+        for (int i = 0; i < order.size(); i++) {
+            position.put(order.get(i), i);
+        }
 
-        TopologicalSortResult dfs =
-                graph.topology().dfs();
+        for (Edge edge : graph.getEdges()) {
 
-        TopologicalSortResult kahn =
-                graph.topology().kahn();
+            int source = edge.source();
+            int destination = edge.destination();
 
-        assertEquals(
-                dfs.order().size(),
-                kahn.order().size(),
-                "Topological ordering size mismatch."
-        );
+            assertTrue(
+                    position.get(source) < position.get(destination),
+                    () -> "Invalid topological order: "
+                            + source + " -> " + destination);
+        }
     }
 }

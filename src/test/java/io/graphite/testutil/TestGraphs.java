@@ -100,4 +100,46 @@ public final class TestGraphs {
                 .addEdge(5, 3)
                 .build();
     }
+
+    //    topology test graphs
+    public static IGraph dag() {
+
+        return Graphs.directed()
+                .addEdge(0, 1)
+                .addEdge(0, 2)
+                .addEdge(1, 3)
+                .addEdge(2, 3)
+                .addEdge(3, 4)
+                .build();
+    }
+
+    public static IGraph disconnectedDag() {
+
+        return Graphs.directed()
+                .vertices(6)
+                .addEdge(0, 1)
+                .addEdge(2, 3)
+                .addEdge(4, 5)
+                .build();
+    }
+
+    public static IGraph cyclicDirectedGraph() {
+
+        return Graphs.directed()
+                .addEdge(0, 1)
+                .addEdge(1, 2)
+                .addEdge(2, 0)
+                .build();
+    }
+
+    public static IGraph singleVertexDag() {
+
+        IGraph graph = Graphs.directed()
+                .addEdge(5, 5)
+                .build();
+
+        graph.removeEdge(5, 5);
+
+        return graph;
+    }
 }
