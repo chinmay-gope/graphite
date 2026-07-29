@@ -132,14 +132,4 @@ public final class TestGraphs {
                 .build();
     }
 
-    public static IGraph singleVertexDag() {
-
-        IGraph graph = Graphs.directed()
-                .addEdge(5, 5)
-                .build();
-
-        graph.removeEdge(5, 5);
-
-        return graph;
-    }
 }
