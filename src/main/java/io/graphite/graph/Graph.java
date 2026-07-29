@@ -6,7 +6,7 @@ import io.graphite.api.analysis.GraphAnalysisService;
 import io.graphite.api.internal.GraphAPI;
 import io.graphite.builder.GraphConfiguration;
 import io.graphite.builder.Graphs;
-import io.graphite.exception.GraphEmptyException;
+import io.graphite.exception.graph.GraphEmptyException;
 import io.graphite.exception.graph.InvalidVertexException;
 import io.graphite.graph.internal.GraphAPIType;
 import io.graphite.graph.internal.ImmutableGraph;
@@ -90,6 +90,9 @@ public abstract class Graph implements IGraph {
     private final EnumMap<GraphAPIType, GraphAPI> cache =
             new EnumMap<>(GraphAPIType.class);
 
+    protected GraphConfiguration configuration() {
+        return configuration;
+    }
 
     protected Graph(GraphConfiguration configuration) {
         this.configuration = configuration;
@@ -103,13 +106,7 @@ public abstract class Graph implements IGraph {
         }
     }
 
-
-    protected GraphConfiguration configuration() {
-        return configuration;
-    }
-
     @Override
-
     public boolean isUsedVertex(int vertex) {
 
         validateVertexIndex(vertex);
@@ -222,6 +219,7 @@ public abstract class Graph implements IGraph {
     // Views
     // ==========================================================
 
+
     @Override
     public boolean hasEdge(int source, int destination) {
 
@@ -314,13 +312,42 @@ public abstract class Graph implements IGraph {
 
     @Override
     public IGraph copy() {
-        return GraphCopier.copy(this);
+
+        Graph copy = configuration.isDirected()
+                ? GraphFactory.directed(configuration)
+                : GraphFactory.undirected(configuration);
+
+        for (Edge edge : getEdges()) {
+            copy.addEdge(
+                    edge.source(),
+                    edge.destination(),
+                    edge.weight()
+            );
+        }
+
+        return copy;
     }
 
     @Override
-    public IGraph transpose() {
-        return GraphTransposer.transpose(this);
+    public IGraph transposed() {
+
+        if (!configuration.isDirected()) {
+            return copy();
+        }
+
+        Graph transpose = GraphFactory.directed(configuration);
+
+        for (Edge edge : getEdges()) {
+            transpose.addEdge(
+                    edge.destination(),
+                    edge.source(),
+                    edge.weight()
+            );
+        }
+
+        return transpose;
     }
+
 
     @Override
     public List<Edge> neighbors(int vertex) {

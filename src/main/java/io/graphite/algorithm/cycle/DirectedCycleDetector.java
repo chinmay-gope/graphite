@@ -4,7 +4,7 @@ import io.graphite.algorithm.GraphAlgorithm;
 import io.graphite.algorithm.traversal.DFS;
 import io.graphite.api.Cycle;
 import io.graphite.api.Topology;
-import io.graphite.exception.algorithm.NullGraphException;
+import io.graphite.exception.graph.GraphEmptyException;
 import io.graphite.graph.IGraph;
 import io.graphite.model.Edge;
 import io.graphite.validation.GraphPreconditions;
@@ -81,7 +81,7 @@ public class DirectedCycleDetector extends GraphAlgorithm implements CycleDetect
      *
      * @return {@code true} if the graph contains a cycle;
      * {@code false} otherwise
-     * @throws NullGraphException if the graph is {@code null}
+     * @throws GraphEmptyException if the graph is {@code null}
      * @see Topology#dfs()
      * @since 2.0
      */

@@ -11,13 +11,13 @@ import java.util.List;
 import java.util.Objects;
 
 /**
- * Represents the result of a shortest path computation.
+ * Represents the result of the shortest path computation.
  *
  * <p>A {@code ShortestPathResult} contains the computed shortest distances
  * from a source vertex and, when available, predecessor information for
  * path reconstruction.</p>
  *
-
+ *
  * <h2>Contents</h2>
  *
  * <ul>
@@ -26,15 +26,13 @@ import java.util.Objects;
  * </ul>
  *
  * <h2>Immutability</h2>
-
  *
- * @param source source vertex
+ * @param source   source vertex
  * @param distance distance array
- * @param parent predecessor array
-
+ * @param parent   predecessor array
  *
- * <p>All internal arrays are defensively copied to preserve immutability.</p>
  *
+ *                 <p>All internal arrays are defensively copied to preserve immutability.</p>
  * @author Chinmay
  * @version 2.0
  * @see ShortestPath

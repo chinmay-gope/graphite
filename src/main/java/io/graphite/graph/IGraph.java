@@ -227,7 +227,7 @@ public interface IGraph {
 
     // ========= Transform =========
 
-    IGraph transpose();
+    IGraph transposed();
 
     // ========= Services =========
 

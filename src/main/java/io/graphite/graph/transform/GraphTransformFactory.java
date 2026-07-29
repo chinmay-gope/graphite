@@ -14,7 +14,7 @@ public final class GraphTransformFactory {
     }
 
     public IGraph transpose(IGraph graph) {
-        return graph.transpose();
+        return graph.transposed();
     }
 
     public IGraph merge(IGraph first,

@@ -1,9 +1,7 @@
 package io.graphite.benchmark.algorithm;
 
 import io.graphite.benchmark.AbstractBenchmark;
-import io.graphite.builder.GraphConfiguration;
 import io.graphite.generator.preset.GraphPresetGenerator;
-import io.graphite.graph.Graph;
 import io.graphite.graph.IGraph;
 
 public final class TraversalBenchmark extends AbstractBenchmark {

@@ -19,6 +19,7 @@ BenchmarkComparisonExample {
                         .add("DFS", () -> graph.traversal().dfs(0))
                         .add("BFS", () -> graph.traversal().bfs(0))
                         .add("Dijkstra", () -> graph.shortestPath().dijkstra(0))
+                        .add("Prim", () -> graph.mst().prim(0))
                         .run();
 
         System.out.println(comparison);

@@ -1,8 +1,8 @@
 package io.graphite.builder;
 
-import io.graphite.benchmark.Benchmarks;
 import io.graphite.benchmark.BenchmarkConfig;
 import io.graphite.benchmark.BenchmarkTask;
+import io.graphite.benchmark.Benchmarks;
 import io.graphite.graph.IGraph;
 
 public final class BenchmarkBuilder {

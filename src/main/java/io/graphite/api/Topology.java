@@ -4,7 +4,7 @@ import io.graphite.algorithm.topology.DFSTopologicalSort;
 import io.graphite.algorithm.topology.KahnTopologicalSort;
 import io.graphite.api.internal.GraphAPI;
 import io.graphite.exception.algorithm.GraphCycleException;
-import io.graphite.exception.algorithm.NullGraphException;
+import io.graphite.exception.graph.GraphEmptyException;
 import io.graphite.exception.graph.UnsupportedGraphTypeException;
 import io.graphite.graph.IGraph;
 import io.graphite.result.TopologicalSortResult;
@@ -76,7 +76,7 @@ public final class Topology extends GraphAPI {
      * </ul>
      *
      * @return the topological ordering
-     * @throws NullGraphException        if the graph is {@code null}
+     * @throws GraphEmptyException        if the graph is {@code null}
      * @throws UnsupportedGraphTypeException if the graph is undirected
      * @throws GraphCycleException       if the graph contains a cycle
      * @see #kahn()
@@ -104,7 +104,7 @@ public final class Topology extends GraphAPI {
      * </ul>
      *
      * @return the topological ordering
-     * @throws NullGraphException        if the graph is {@code null}
+     * @throws GraphEmptyException        if the graph is {@code null}
      * @throws UnsupportedGraphTypeException if the graph is undirected
      * @throws GraphCycleException       if the graph contains a cycle
      * @see #dfs()

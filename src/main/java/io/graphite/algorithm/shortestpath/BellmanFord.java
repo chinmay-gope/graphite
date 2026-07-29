@@ -102,6 +102,7 @@ public class BellmanFord extends GraphAlgorithm implements ShortestPathAlgorithm
     public ShortestPathResult shortestPath(IGraph graph, int source) {
         GraphPreconditions.requireGraph(graph);
         GraphPreconditions.requireVertex(graph, source);
+        GraphPreconditions.requireActiveVertex(graph, source);
 
         int[] distance = ints(graph, Integer.MAX_VALUE);
         int[] parent = ints(graph, -1);
@@ -127,12 +128,14 @@ public class BellmanFord extends GraphAlgorithm implements ShortestPathAlgorithm
 
                 int u = edge.source();
                 int v = edge.destination();
-                int wt = edge.weight();
 
-                if (distance[u] != Integer.MAX_VALUE &&
-                        distance[u] + wt < distance[v]) {
+                if (distance[u] == Integer.MAX_VALUE)
+                    continue;
 
-                    distance[v] = distance[u] + wt;
+                int candidate = distance[u] + edge.weight();
+
+                if (candidate < distance[v]) {
+                    distance[v] = candidate;
                     parent[v] = u;
                 }
             }
@@ -140,13 +143,16 @@ public class BellmanFord extends GraphAlgorithm implements ShortestPathAlgorithm
     }
 
     private void detectNegativeCycle(List<Edge> edges, int[] distance) {
+
         for (Edge edge : edges) {
+
             int u = edge.source();
             int v = edge.destination();
-            int wt = edge.weight();
 
-            if (distance[u] + wt < distance[v] && distance[u] != Integer.MAX_VALUE) {
+            if (distance[u] == Integer.MAX_VALUE)
+                continue;
 
+            if (distance[u] + edge.weight() < distance[v]) {
                 throw new NegativeCycleException();
             }
         }

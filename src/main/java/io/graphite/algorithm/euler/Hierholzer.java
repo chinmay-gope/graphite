@@ -2,9 +2,9 @@ package io.graphite.algorithm.euler;
 
 import io.graphite.algorithm.GraphAlgorithm;
 import io.graphite.api.Euler;
-import io.graphite.exception.GraphEmptyException;
 import io.graphite.exception.algorithm.GraphCycleException;
 import io.graphite.exception.graph.GraphDisconnectedException;
+import io.graphite.exception.graph.GraphEmptyException;
 import io.graphite.graph.IGraph;
 import io.graphite.model.Edge;
 import io.graphite.result.EulerResult;

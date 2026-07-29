@@ -184,8 +184,8 @@ public final class ImmutableGraph implements IGraph {
     }
 
     @Override
-    public IGraph transpose() {
-        return delegate.transpose().asImmutable();
+    public IGraph transposed() {
+        return delegate.transposed().asImmutable();
     }
 
 //    _____________________services______________________

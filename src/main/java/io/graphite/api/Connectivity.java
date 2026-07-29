@@ -5,7 +5,7 @@ import io.graphite.algorithm.connectivity.BiconnectedComponents;
 import io.graphite.algorithm.connectivity.BridgeFinder;
 import io.graphite.algorithm.connectivity.Kosaraju;
 import io.graphite.api.internal.GraphAPI;
-import io.graphite.exception.algorithm.NullGraphException;
+import io.graphite.exception.graph.GraphEmptyException;
 import io.graphite.exception.graph.UnsupportedGraphTypeException;
 import io.graphite.graph.IGraph;
 import io.graphite.result.APResult;
@@ -93,7 +93,7 @@ public final class Connectivity extends GraphAPI {
      * </ul>
      *
      * @return all bridge edges
-     * @throws NullGraphException        if the graph is {@code null}
+     * @throws GraphEmptyException        if the graph is {@code null}
      * @throws UnsupportedGraphTypeException if the graph is directed
      * @since 2.0
      */
@@ -121,7 +121,7 @@ public final class Connectivity extends GraphAPI {
      * </ul>
      *
      * @return the connected components of the graph
-     * @throws NullGraphException        if the graph is {@code null}
+     * @throws GraphEmptyException        if the graph is {@code null}
      * @throws UnsupportedGraphTypeException if the graph is directed
      * @see #stronglyConnectedComponents()
      * @since 2.0
@@ -151,7 +151,7 @@ public final class Connectivity extends GraphAPI {
      * </ul>
      *
      * @return the strongly connected components
-     * @throws NullGraphException        if the graph is {@code null}
+     * @throws GraphEmptyException        if the graph is {@code null}
      * @throws UnsupportedGraphTypeException if the graph is undirected
      * @see #biconnectedComponents()
      * @since 2.0

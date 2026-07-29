@@ -52,4 +52,13 @@ class BuilderValidationTest {
 
         assertEquals(5, graph.getVertices());
     }
+
+    @Test
+    void emptyGraphConstructionThrows() {
+
+        assertThrows(
+                InvalidGraphConfigurationException.class,
+                () -> Graphs.undirected().build()
+        );
+    }
 }

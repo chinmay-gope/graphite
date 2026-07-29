@@ -216,8 +216,4 @@ public class GraphPresetGenerator {
         );
     }
 
-    public GraphPresetGenerator presets() {
-        return new GraphPresetGenerator();
-    }
-
 }
