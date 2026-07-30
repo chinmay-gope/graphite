@@ -1,34 +1,16 @@
-# Graphite V2
-
-<<<<<<< HEAD
+# Graphite
 <p align="center">
   <b>A modern, lightweight, immutable-first Java graph library.</b><br>
   Build graphs • Analyze graphs • Generate graphs • Benchmark algorithms
 </p>
 
 <p align="center">
-=======
-<div style="text-align: center;">
-  <b>A modern, lightweight, immutable-first Java graph library.</b><br>
-  Build graphs • Analyze graphs • Generate graphs • Benchmark algorithms
-</div>
-
-<div style="text-align: center;">
->>>>>>> fec1ea5 (fix: java docs)
-
-![Java](https://img.shields.io/badge/Java-21+-orange)
-![Version](https://img.shields.io/badge/Version-2.0-blue)
-![Status](https://img.shields.io/badge/Status-Stable-brightgreen)
-![Algorithms](https://img.shields.io/badge/Algorithms-15%2B-success)
-![License](https://img.shields.io/badge/License-MIT-lightgrey)
-
-<<<<<<< HEAD
+  <img src="https://img.shields.io/badge/Java-21+-orange" alt="Java">
+  <img src="https://img.shields.io/badge/Version-2.0-blue" alt="Version">
+  <img src="https://img.shields.io/badge/Status-Stable-brightgreen" alt="Status">
+  <img src="https://img.shields.io/badge/Algorithms-15%2B-success" alt="Algorithms">
+  <img src="https://img.shields.io/badge/License-MIT-lightgrey" alt="License">
 </p>
-=======
-</div>
->>>>>>> fec1ea5 (fix: java docs)
-
----
 
 Graphite is a modern graph library for Java designed around a fluent API, clean architecture, and immutable graph support. It provides a comprehensive collection of graph algorithms, graph generators, formatting utilities, benchmarking tools, and stress-testing utilities through a consistent, easy-to-use API.
 
@@ -68,9 +50,78 @@ ShortestPathResult paths =
 
 ---
 
-> **Graphite V2** focuses on simplicity, consistency, and extensibility—making graph algorithms easier to use without sacrificing performance or architectural clarity.
+## Installation
+
+Graphite is available via **JitPack**.
+
+### Requirements
+
+- Java **21+**
+- Maven **3.9+**
+
+### Maven
+
+Add the JitPack repository:
+
+```xml
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+```
+
+Configure your project to compile with **Java 21**:
+
+```xml
+<properties>
+    <maven.compiler.release>21</maven.compiler.release>
+</properties>
+```
+
+Finally, add the dependency:
+
+```xml
+<dependencies>
+    <dependency>
+        <groupId>com.github.chinmay-gope</groupId>
+        <artifactId>graphite</artifactId>
+        <version>v2.1.1-rc1</version>
+    </dependency>
+</dependencies>
+```
+
+### Verify Installation
+
+```java
+import io.graphite.print.GraphPrinter;
+import io.graphite.builder.Graphs;
+import io.graphite.graph.IGraph;
+
+public class Main {
+    public static void main(String[] args) {
+         IGraph graph = Graphs.undirected()
+                .addEdge(3, 4)
+                .addEdge(3, 2)
+                .addEdge(3, 1)
+                .build();
+
+         GraphPrinter.println(graph);
+    }
+}
+```
+
+> **Note**
+>
+> Graphite requires **Java 21 or later**. Ensure your project's
+> `<maven.compiler.release>` is set to `21`.
+
+
 
 ## Why Graphite?
+
+> **Graphite V2** focuses on simplicity, consistency, and extensibility—making graph algorithms easier to use without sacrificing performance or architectural clarity.
 
 Graphite was created with a simple goal:
 
